@@ -91,19 +91,21 @@
     </head>
 
     <body> 
+        <div class="container" style="color:Black">
+            <h1>Welcome to Cougar Petroleum</h1>
+        </div>
         <div class="container">
-            <h4>Welcome to Cougar Petroleum</h4>
             <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
                 <!-- <div class="container"> -->
                     <div class="form-group has-success">
                         <label for="uname" class="control-label col-sm-2"><b>Username</b></label>
-                        <div>
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
                         </div>
                     </div>
                     <div class="form-group has-success">
                         <label for="psw" class="control-label col-sm-2"><b>Password</b></label>
-                        <div>
+                        <div class="col-sm-6">
                             <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
                             <EI-INJECT-HIDDEN-INPUT-FILEDS/>
                         </div>
