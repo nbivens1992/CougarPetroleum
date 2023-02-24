@@ -11,14 +11,19 @@
 - You should have validations  place for required fields, field types, and field lengths.  -->
 
 <!DOCTYPE html>
-<html class = "center">
+<html>
 <head>
 <style>
 
-  
+  html {
+    display: table;
+    margin: auto;
+  }
   body {
     display: table-cell;
     background-color: #960c22;
+    top: 50%;
+    width: 60%;
     padding: 10px;
   }
   table {
@@ -26,14 +31,15 @@
     border-collapse: collapse;
     width: 90%;
     margin: auto;
-    top: 50%;
   }
 
   .center {
     margin-left: auto;
     margin-right: auto;
   }
-
+  .container{
+    padding: 16px;
+  }
   td, th {
     border: 1px solid #54585a;
     text-align: left;
@@ -62,7 +68,8 @@
     margin-left: auto;
     margin-right: auto;
   } 
-  div{
+  
+  .jc{
     justify-content: "center";
   }
   
@@ -74,80 +81,81 @@
 <body class="center">
 
   <h2 class = "center">Fuel Quote History</h2>
+    <div class = "container">
+      <table  class="center">
+        <tr>
+          <th>Gallons Requested</th>
+          <th>Delivery Address</th>
+          <th>Delivery Date</th>
+          <th>Suggested Price</th>
+          <th>Total Amount Due</th>
 
-    <table  class="center">
-      <tr>
-        <th>Gallons Requested</th>
-        <th>Delivery Address</th>
-        <th>Delivery Date</th>
-        <th>Suggested Price</th>
-        <th>Total Amount Due</th>
-
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-    <div>
-      <button onClick="window.location.href='/CougarPetroleum/pages/FuelQuote.html';">
-        Request a Quote
-      </button>
-      <button onClick="window.location.href='/CougarPetroleum/index.html';">
-        Exit
-      </button>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <div>
+        <button class = "jc" onClick="window.location.href='/CougarPetroleum/pages/FuelQuote.html';">
+          Request a Quote
+        </button>
+        <button class = "jc" onClick="window.location.href='/CougarPetroleum/index.html';">
+          Exit
+        </button>
+      </div>
     </div>
 
   </body>
