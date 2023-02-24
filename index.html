@@ -32,50 +32,81 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <img src="img/CougarPetroleum.png">
-    <!-- <img src='https://DaManRiteHere.github.io/Group-Assignment-WebDev-GasModel/gas_model.html'> -->
 </head>
 <style>
-    html {
-    display: table;
-    margin: auto;
-}
+        form {
+            border: 3px solid #f1f1f1;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
 
-    body {
-      display: table-cell;
-      margin: auto;
-      vertical-align: middle;
-      width: 60%;
-      background-color: rgb(180, 3, 3);
-      padding: 10px;
-      text-align: center;
-      
-    }
+        .container {
+            padding: 16px;
+        }
+
+        html {
+        display: table;
+        margin: auto;
+        }
+
+        body {
+        display: table-cell;
+        margin: auto;
+        vertical-align: middle;
+        width: 60%;
+        background-color: rgb(180, 3, 3);
+        padding: 10px;
+        text-align: center;
+        
+        }
     </style>
+    
+
+
 <body> 
     <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize">
-        <h1>Please Login</h1>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" name="username" required="required" /> 
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <EI-INJECT-HIDDEN-INPUT-FILEDS/>
 
-        <p>Username</p>
-        <p style ="text-indent:0em;"><input type="text" name="username" required="required" /> </p>
-        
-        <p>Password</p>
-        <p style = "text-indent:0em;"><input type="text" password="password" required="required"/></p>
-        <EI-INJECT-HIDDEN-INPUT-FILEDS/>
+            <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
 
-        <p style ="text-indent: 0em;"><button id = "Login_button" type ="submit" name="login" value="true">Log in</button></p>
-
-        <EI-LOGINFIRSTTIME>
-            <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
-             <!-- <button onClick="window.location.href='file:///C:/Users/bryan/OneDrive/Documents/Group%20Assignment%20Software%20Design/Group-Assignment-/sign_up.html';">   -->
-            <button onClick="window.location.href='sign_up.html';">
-                Join Now  
-             </button> 
-        </EI-LOGINFIRSTTIME>
-        
-        <EI-LOGINFAILED>
-            <p style ="color:rgb(255, 238, 7)"> Login information is invalid</p>
-        </EI-LOGINFAILED>
-
+            <EI-LOGINFIRSTTIME>
+                <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
+                <button onClick="window.location.href='sign_up.html';">
+                    Join Now  
+                </button> 
+            </EI-LOGINFIRSTTIME>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            
+            <EI-LOGINFAILED>
+                <p style ="color:rgb(255, 238, 7)"> Login information is invalid</p>
+            </EI-LOGINFAILED>
+        </div>
         <EI-INTERNAL-CUSTOM-FORM-ERROR/>    
     </form>
 
