@@ -95,7 +95,7 @@
         </div>
         <div class="container">
             <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
-                <!-- <div class="container"> -->
+               
                     <div class="form-group has-success">
                         <label for="uname" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Username</b></label>
                         <div class="col-sm-6">
@@ -109,23 +109,23 @@
                             <EI-INJECT-HIDDEN-INPUT-FILEDS/>
                         </div>
                     </div>
-                    <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
-
-                    <EI-LOGINFIRSTTIME>
-                        <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
-                        <button onClick="window.location.href='/CougarPetroleum/pages/signUpForm.html';">
-                            Join Now  
-                        </button> 
-                    </EI-LOGINFIRSTTIME>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                    
-                    <EI-LOGINFAILED>
-                        <p style ="color:#0A0A0A"> Login information is invalid</p>
-                    </EI-LOGINFAILED>
-                <!-- </div> -->
-                <EI-INTERNAL-CUSTOM-FORM-ERROR/>  
+                    <div class="form-group has-success"></div>
+                        <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
+                        <EI-LOGINFIRSTTIME>
+                            <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
+                            <button onClick="window.location.href='/CougarPetroleum/pages/signUpForm.html';">
+                                Join Now  
+                            </button> 
+                        </EI-LOGINFIRSTTIME>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                        
+                        <EI-LOGINFAILED>
+                            <p style ="color:#0A0A0A"> Login information is invalid</p>
+                        </EI-LOGINFAILED>
+                        <EI-INTERNAL-CUSTOM-FORM-ERROR/>  
+                     </div>
                 
             </form>
         </div>
