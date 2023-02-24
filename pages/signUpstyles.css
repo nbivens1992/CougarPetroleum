@@ -33,9 +33,10 @@ select{
   background-color:#eee;
   font-size:108%;width:300px;
   height:36px;
-  border:1px solid #ccc;
+  /* border:1px solid #ccc;
   -moz-border-radius:6px;
-  border-radius:6px}
+  border-radius:6px */
+}
 
 button:hover {
   opacity:1;
