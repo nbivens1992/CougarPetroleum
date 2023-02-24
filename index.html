@@ -29,11 +29,11 @@
 -->
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <img src="img/CougarPetroleum.png">
-</head>
 <style>
+        img {
+        max-width: 100%;
+        height: auto;
+        } 
         form {
             border: 3px solid #0A0A0A;
             background-color: #f6be00;
@@ -80,45 +80,47 @@
         
         }
     </style>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <img src="img/CougarPetroleum.png">
+    </head>
+
+    <body> 
+        <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize">
+            <div class="container">
+                <div>
+                    <label for="uname"><b>Username</b></label>
+                    <div>
+                        <input type="text" placeholder="Enter Username" name="username" required="required" /> 
+                    </div>
+                </div>
+                <div>
+                    <label for="psw"><b>Password</b></label>
+                    <div>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <EI-INJECT-HIDDEN-INPUT-FILEDS/>
+                    </div>
+                </div>
+                <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
+
+                <EI-LOGINFIRSTTIME>
+                    <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
+                    <button onClick="window.location.href='pages/signUpForm.html';">
+                        Join Now  
+                    </button> 
+                </EI-LOGINFIRSTTIME>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                
+                <EI-LOGINFAILED>
+                    <p style ="color:rgb(255, 238, 7)"> Login information is invalid</p>
+                </EI-LOGINFAILED>
+            </div>
+            <EI-INTERNAL-CUSTOM-FORM-ERROR/>    
+        </form>
+
+    </body>
     
-
-
-<body> 
-    <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize">
-        <div class="container">
-            <div>
-                <label for="uname"><b>Username</b></label>
-                <div>
-                    <input type="text" placeholder="Enter Username" name="username" required="required" /> 
-                </div>
-            </div>
-            <div>
-                <label for="psw"><b>Password</b></label>
-                <div>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <EI-INJECT-HIDDEN-INPUT-FILEDS/>
-                </div>
-            </div>
-            <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
-
-            <EI-LOGINFIRSTTIME>
-                <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
-                <button onClick="window.location.href='signUpForm.html';">
-                    Join Now  
-                </button> 
-            </EI-LOGINFIRSTTIME>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-            
-            <EI-LOGINFAILED>
-                <p style ="color:rgb(255, 238, 7)"> Login information is invalid</p>
-            </EI-LOGINFAILED>
-        </div>
-        <EI-INTERNAL-CUSTOM-FORM-ERROR/>    
-    </form>
-
-</body>
- 
 </html>
 
