@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Client Registration (Initially only username and Password)
+- Client Profile Management (After client registers they should login first to complete the profile). 
+Following fields will be on Profile page / form:
+	- Full Name (50 characters, required)
+	- Address 1 (100 characters, required)
+	- Address 2 (100 characters, optional)
+	- City (100 characters, required)
+	- State (Drop Down, selection required) DB will store 2 character state code
+	- Zipcode (9 characters, at least 5 character code required)-->
+<html lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<style>
+    body {
+      margin: auto;
+      width: 60%;
+      background-color: darkred;
+      padding: 10px;
+    }
+    table {
+        background-color: rgb(170, 165, 165);
+        font-family:'Times New Roman', Times, serif;
+    }
+    </style>
+<body> 
+    <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize">
+        <table id = "Register_table"; cellspacing="5px" cellpadding="5%";>
+            <tr>
+                <td class=" style1";> Full Name</td>
+                <td class="style1"><input type="text" name="Full Name" />
+            </td>
+            </tr>
+                <td class=" style1";>Address 1</td>
+                <td class="style1"><input type="text" name="Full Name" />
+                </td>
+            <tr>
+            </tr>
+                <td class=" style1";>Address 2</td>
+                <td class="style1"><input type="text" name="Full Name" />
+                </td>
+            <tr>
+            </tr>
+                <td class=" style1";>City</td>
+                <td class="style1"><input type="text" name="Full Name" />
+                </td>
+        <tr>        
+                
+
+            </tr>
+
+        </table>
+
+    </form>
+</body>
+</html>
