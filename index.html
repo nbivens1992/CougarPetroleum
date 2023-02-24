@@ -64,10 +64,6 @@
             opacity: 0.8;
         }
 
-        .container {
-            padding: 16px;
-        }
-
         html {
             display: table;
             margin: auto;
@@ -76,13 +72,10 @@
         body {
             display: table-cell;
             margin: auto;
-            vertical-align: middle;
             top: 50%;
             width: 60%;
             background-color: #E30004;
             padding: 10px;
-            text-align: center;
-        
         }
     </style>
     <head>
@@ -98,13 +91,13 @@
             <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
                 <!-- <div class="container"> -->
                     <div class="form-group has-success">
-                        <label for="uname" class="control-label col-sm-2"><b>Username</b></label>
+                        <label for="uname" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Username</b></label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
                         </div>
                     </div>
                     <div class="form-group has-success">
-                        <label for="psw" class="control-label col-sm-2"><b>Password</b></label>
+                        <label for="psw" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Password</b></label>
                         <div class="col-sm-6">
                             <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
                             <EI-INJECT-HIDDEN-INPUT-FILEDS/>
