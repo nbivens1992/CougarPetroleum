@@ -60,6 +60,7 @@ button:hover {
   padding: 16px;
 }
 
+
 /* Clear floats */
 .clearfix::after {
   content: "";
