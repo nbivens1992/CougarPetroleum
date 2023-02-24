@@ -73,7 +73,7 @@ button:hover {
   }
 
   fieldset{
-    border: none;
+    border: 0;
     opacity: 1;
     background-color:#f1f1f1;
     width: 100%;
