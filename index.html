@@ -64,9 +64,7 @@
             opacity: 0.8;
         }
 
-        .container {
-            padding: 16px;
-        }
+
 
         html {
             display: table;
@@ -91,40 +89,43 @@
     </head>
 
     <body> 
-        <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
-            <!-- <div class="container"> -->
-                <div>
-                    <label for="uname" class=”control-label”><b>Username</b></label>
-                    <div>
-                        <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
+        <div class="container">
+            <h4>Welcome to Cougar Petroleum</h4>
+            <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
+                <!-- <div class="container"> -->
+                    <div class="form-group has-success">
+                        <label for="uname" class="control-label col-sm-2"><b>Username</b></label>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <label for="psw" class=”control-label”><b>Password</b></label>
-                    <div>
-                        <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
-                        <EI-INJECT-HIDDEN-INPUT-FILEDS/>
+                    <div class="form-group has-success">
+                        <label for="psw" class="control-label col-sm-2"><b>Password</b></label>
+                        <div>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                            <EI-INJECT-HIDDEN-INPUT-FILEDS/>
+                        </div>
                     </div>
-                </div>
-                <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
+                    <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
 
-                <EI-LOGINFIRSTTIME>
-                    <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
-                    <button onClick="window.location.href='/CougarPetroleum/pages/signUpForm.html';">
-                        Join Now  
-                    </button> 
-                </EI-LOGINFIRSTTIME>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                    <EI-LOGINFIRSTTIME>
+                        <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
+                        <button onClick="window.location.href='/CougarPetroleum/pages/signUpForm.html';">
+                            Join Now  
+                        </button> 
+                    </EI-LOGINFIRSTTIME>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    
+                    <EI-LOGINFAILED>
+                        <p style ="color:rgb(255, 255, 255)"> Login information is invalid</p>
+                    </EI-LOGINFAILED>
+                <!-- </div> -->
+                <EI-INTERNAL-CUSTOM-FORM-ERROR/>  
                 
-                <EI-LOGINFAILED>
-                    <p style ="color:rgb(255, 255, 255)"> Login information is invalid</p>
-                </EI-LOGINFAILED>
-            <!-- </div> -->
-            <EI-INTERNAL-CUSTOM-FORM-ERROR/>    
-        </form>
-
+            </form>
+        </div>
     </body>
     
 </html>
