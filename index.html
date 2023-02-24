@@ -35,7 +35,9 @@
 </head>
 <style>
         form {
-            border: 3px solid #f1f1f1;
+            border: 3px solid #0A0A0A;
+            background-color: #f6be00;
+
         }
         input[type=text], input[type=password] {
             width: 100%;
@@ -46,7 +48,7 @@
             box-sizing: border-box;
         }
         button {
-            background-color: #04AA6D;
+            background-color: #0A0A0A;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -72,7 +74,7 @@
         margin: auto;
         vertical-align: middle;
         width: 60%;
-        background-color: rgb(180, 3, 3);
+        background-color: #E30004;
         padding: 10px;
         text-align: center;
         
@@ -84,13 +86,19 @@
 <body> 
     <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize">
         <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" name="username" required="required" /> 
-            
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <EI-INJECT-HIDDEN-INPUT-FILEDS/>
-
+            <div>
+                <label for="uname"><b>Username</b></label>
+                <div>
+                    <input type="text" placeholder="Enter Username" name="username" required="required" /> 
+                </div>
+            </div>
+            <div>
+                <label for="psw"><b>Password</b></label>
+                <div>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <EI-INJECT-HIDDEN-INPUT-FILEDS/>
+                </div>
+            </div>
             <button id = "Login_button" type ="submit" name="login" value="true">Log in</button>
 
             <EI-LOGINFIRSTTIME>
