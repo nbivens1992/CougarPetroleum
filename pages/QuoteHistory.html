@@ -15,50 +15,60 @@
 <head>
 <style>
 
-body {
+  html{
+    margin: auto;
+  }
+
+  body {
     display: table-cell;
-    margin: 20px;
     top: 50%;
     width: 60%;
     background-color: #960c22;
     padding: 10px;
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  padding: 20px;
-  margin: auto;
-  top: 50%;
-  margin: 20px;
-}
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    top: 50%;
+    margin: auto;
+  }
 
-td, th {
-  border: 1px solid #54585a;
-  text-align: left;
-  padding: 8px;
-}
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-
-
-
-tr:nth-child(even) {
-  background-color: #fff9d9; 
-}
-tr:nth-child(odd) {
-  background-color: #888b8d;
-}
+  td, th {
+    border: 1px solid #54585a;
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: #fff9d9; 
+  }
+  tr:nth-child(odd) {
+    background-color: #888b8d;
+  }
+  button {
+    background-color: #00b388;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
 
 
 </style>
 </head>
-<body>
+<body class="center">
 
-  <h2>Fuel Quote History</h2>
+  <h2 class = "center">Fuel Quote History</h2>
 
     <table  class="center">
       <tr>
