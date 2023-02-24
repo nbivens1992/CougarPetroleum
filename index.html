@@ -29,10 +29,14 @@
 -->
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
         img {
-        max-width: 300%;
-        height: auto;
+            max-width: auto;
+            height: 100%;
         } 
         form {
             border: 3px solid #0A0A0A;
@@ -65,18 +69,18 @@
         }
 
         html {
-        display: table;
-        margin: auto;
+            display: table;
+            margin: auto;
         }
 
         body {
-        display: table-cell;
-        margin: auto;
-        vertical-align: middle;
-        width: 60%;
-        background-color: #E30004;
-        padding: 10px;
-        text-align: center;
+            display: table-cell;
+            margin: auto;
+            vertical-align: middle;
+            width: 60%;
+            background-color: #E30004;
+            padding: 10px;
+            text-align: center;
         
         }
     </style>
@@ -86,18 +90,18 @@
     </head>
 
     <body> 
-        <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize">
+        <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
             <div class="container">
                 <div>
-                    <label for="uname"><b>Username</b></label>
+                    <label for="uname" class=”control-label”><b>Username</b></label>
                     <div>
-                        <input type="text" placeholder="Enter Username" name="username" required="required" /> 
+                        <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
                     </div>
                 </div>
                 <div>
-                    <label for="psw"><b>Password</b></label>
+                    <label for="psw" class=”control-label”><b>Password</b></label>
                     <div>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
                         <EI-INJECT-HIDDEN-INPUT-FILEDS/>
                     </div>
                 </div>
