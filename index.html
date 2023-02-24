@@ -35,7 +35,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
         img {
-            max-width: auto;
+            max-width: 200px;
             height: 100%;
         } 
         form {
@@ -77,6 +77,7 @@
             display: table-cell;
             margin: auto;
             vertical-align: middle;
+            top: 50%;
             width: 60%;
             background-color: #E30004;
             padding: 10px;
@@ -91,7 +92,7 @@
 
     <body> 
         <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
-            <div class="container">
+            <!-- <div class="container"> -->
                 <div>
                     <label for="uname" class=”control-label”><b>Username</b></label>
                     <div>
@@ -120,7 +121,7 @@
                 <EI-LOGINFAILED>
                     <p style ="color:rgb(255, 255, 255)"> Login information is invalid</p>
                 </EI-LOGINFAILED>
-            </div>
+            <!-- </div> -->
             <EI-INTERNAL-CUSTOM-FORM-ERROR/>    
         </form>
 
