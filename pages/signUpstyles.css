@@ -12,7 +12,7 @@ input[type=text], input[type=form],input[type=numeric]{
   background: #f1f1f1;
 }
 input[type=date]{
-  width: 20%;
+  width: auto;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;

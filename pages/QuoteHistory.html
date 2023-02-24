@@ -31,9 +31,10 @@ table {
   margin: auto;
   top: 50%;
   margin: 20px;
+}
+.center {
   margin-left: auto;
   margin-right: auto;
-
 }
 
 td, th {
@@ -41,6 +42,9 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+
+
+
 
 tr:nth-child(even) {
   background-color: #fff9d9; 
@@ -56,7 +60,7 @@ tr:nth-child(odd) {
 
   <h2>Fuel Quote History</h2>
 
-    <table>
+    <table  class="center">
       <tr>
         <th>Gallons Requested</th>
         <th>Delivery Address</th>
@@ -125,6 +129,9 @@ tr:nth-child(odd) {
 
     <button onClick="window.location.href='/CougarPetroleum/pages/FuelQuote.html';">
       Request a Quote
+    </button>
+    <button onClick="window.location.href='/CougarPetroleum/pages/FuelQuote.html';">
+      Exit
     </button>
 
   </body>
