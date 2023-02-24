@@ -65,14 +65,19 @@ button:hover {
   clear: both;
   display: table;
 }
-
+fieldset{
+  border-color: #f1f1f1;
+  border-style: solid;
+  border:0px;
+}
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
 
-  fieldset{
+
+  /* fieldset{
     border: 0;
     border-color: #eee;
     opacity: 1;
@@ -82,6 +87,6 @@ button:hover {
     margin: 5px 0 22px 0;
     display: inline-block;
     
-  }
+  } */
     
 }
