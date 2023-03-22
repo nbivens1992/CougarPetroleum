@@ -1,0 +1,32 @@
+Assignment 3 NOTES FROM NICK
+
+I am following the 8 hour tutorial https://www.youtube.com/watch?v=CvCiNeLnZ00
+
+his repository (from the video) is here
+https://github.com/gitdagray/mern_stack_course/tree/main/
+
+
+download node.js:   https://nodejs.org/en
+
+
+in command prompt (each - is a bullet)
+- npm init -y  (initializes node project)
+- npm i express (installs expressframework)
+- npm i nodemon -D (installs a system that creates realtime adjoustments)
+- npm run dev (runs so we can see errors)
+- npm i cookie-parser
+- npm i cors
+- npm i dotenv (has to do with Database)
+
+
+midleware logs errors and events
+
+using Postmates for unit tests need to download https://www.postman.com/downloads/
+
+1. we are using node JS with express framework
+2. we are using postman for unit testing
+3. looks like we need to build our database because I dont know how else to run the unit tests (dont get hard code it statement in description)
+4. Main challenge is making database and creating controller functions for quote request and quote History / 
+    adjusting the code in the video to our project
+5. We are using DB Mongo for the backend Database
+
