@@ -1,5 +1,5 @@
 const User = require('../models/User')
-//const Note = require('../models/Note')
+const Quote = require('../models/Note')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 
@@ -22,7 +22,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    const { username, password, fullName, address1, address2, city,state,zip } = req.body
+    const { username, password, fullName, address1, address2, city, state, zip } = req.body
 
     // Confirm data
     if (!username || !password || !fullName || !address1 || !city || !state || !zip ) {
@@ -39,7 +39,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     // Hash password 
     const hashedPwd = await bcrypt.hash(password, 10) // salt rounds
 
-    const userObject = { username, "password": hashedPwd }
+    const userObject = { username, "password": hashedPwd, fullName, address1, address2, city, state, zip}
 
     // Create and store new user 
     const user = await User.create(userObject)
@@ -102,11 +102,11 @@ const deleteUser = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'User ID Required' })
     }
 
-    // // Does the user still have assigned quotes?
-    // const note = await Note.findOne({ user: id }).lean().exec()
-    // if (note) {
-    //     return res.status(400).json({ message: 'User has assigned notes' })
-    // }
+    // Does the user still have assigned quotes?
+    const Quote = await Quote.findOne({ user: id }).lean().exec()
+    if (Quote) {
+        return res.status(400).json({ message: 'User has assigned quotes' })
+    }
 
     // Does the user exist to delete?
     const user = await User.findById(id).exec()
