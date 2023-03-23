@@ -1,5 +1,6 @@
 //lesson 3
-
+// should mimic quote form 
+// connect to user 
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
