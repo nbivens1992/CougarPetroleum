@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const Note = require('../models/Note')
+//const Note = require('../models/Note')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 
@@ -22,7 +22,6 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    // ********* NEEDS TO CHANGE FOR OUR PROJECT ADD SIGNUP INFO
     const { username, password, roles } = req.body
 
     // Confirm data
@@ -103,11 +102,11 @@ const deleteUser = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'User ID Required' })
     }
 
-    // Does the user still have assigned notes?
-    const note = await Note.findOne({ user: id }).lean().exec()
-    if (note) {
-        return res.status(400).json({ message: 'User has assigned notes' })
-    }
+    // // Does the user still have assigned notes?
+    // const note = await Note.findOne({ user: id }).lean().exec()
+    // if (note) {
+    //     return res.status(400).json({ message: 'User has assigned notes' })
+    // }
 
     // Does the user exist to delete?
     const user = await User.findById(id).exec()
