@@ -34,7 +34,10 @@ const createNewQuote = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'Not all required fields filled' })
     }
 
-    const quote = await Quote.create({galReq, dDate })
+        
+    const quoteObject = {user, galReq, dAddress, dDate, sPrice, amountDue, completed}
+
+    const quote = await Quote.create(quoteObject)
 
     if (quote) { //created 
         res.status(201).json({ message: `New quote created` })
