@@ -55,9 +55,9 @@ const updateQuote = asyncHandler(async (req, res) => {
     }
 
     // Confirm note exists to update
-    const note = await Quote.findById(id).exec()
+    const quote = await Quote.findById(id).exec()
 
-    if (!note) {
+    if (!quote) {
         return res.status(400).json({ message: 'Quote not found' })
     }
 
@@ -93,7 +93,7 @@ const deleteQuote = asyncHandler(async (req, res) => {
     // Does the user exist to delete?
     const Quote = await Quote.findById(id).exec()
 
-    if (!quote) {
+    if (!Quote) {
         return res.status(400).json({ message: 'User not found' })
     }
 
