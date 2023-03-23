@@ -6,6 +6,6 @@ router.route('/')
     .get(quoteController.getAllQuotes)
     .post(quoteController.createNewQuote)
     .patch(quoteController.updateQuote)
-    // .delete(quoteController.deleteQuote)
+    .delete(quoteController.deleteQuote)
 
 module.exports = router

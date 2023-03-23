@@ -139,3 +139,5 @@
 20230323	15:42:32	7c3fa25e-a0fc-4815-91fc-a053429261dc	POST	/users	undefined
 20230323	15:42:53	28248829-52d8-4177-b9c9-c053c2f634b4	POST	/users	undefined
 20230323	15:43:15	f1bf6bfd-2544-4b82-8b37-7b9af98f569c	GET	/users	undefined
+20230323	16:33:55	c92c6f63-055c-4d51-8e26-e3cfc2e1e310	POST	/quotes	undefined
+20230323	16:34:52	d24db489-0e1a-4fdf-90e0-464d3797242c	POST	/quotes	undefined
