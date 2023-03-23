@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt')
 // @desc Get all users
 // @route GET /users
 // @access Private
-const getAllUsers = asyncHandler(async (req, res) => {
+const getAllQuotes = asyncHandler(async (req, res) => {
     // Get all users from MongoDB
     const users = await User.find().select('-password').lean()
 
@@ -21,8 +21,8 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @desc Create new user
 // @route POST /users
 // @access Private
-const createNewUser = asyncHandler(async (req, res) => {
-    const { username, password, fullName, address1, address2, city, state, zip } = req.body
+const createNewQuote = asyncHandler(async (req, res) => {
+    const { username, password, fullName, address1, address2, city,state,zip } = req.body
 
     // Confirm data
     if (!username || !password || !fullName || !address1 || !city || !state || !zip ) {
@@ -54,7 +54,7 @@ const createNewUser = asyncHandler(async (req, res) => {
 // @desc Update a user
 // @route PATCH /users
 // @access Private
-const updateUser = asyncHandler(async (req, res) => {
+const updateQuote = asyncHandler(async (req, res) => {
     const { id, username, roles, active, password } = req.body
 
     // Confirm data 
@@ -94,37 +94,36 @@ const updateUser = asyncHandler(async (req, res) => {
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-const deleteUser = asyncHandler(async (req, res) => {
-    const { id } = req.body
+// const deleteQuote = asyncHandler(async (req, res) => {
+//     const { id } = req.body
 
-    // Confirm data
-    if (!id) {
-        return res.status(400).json({ message: 'User ID Required' })
-    }
+//     // Confirm data
+//     if (!id) {
+//         return res.status(400).json({ message: 'User ID Required' })
+//     }
 
-    // Does the user still have assigned quotes?
-    const Quote = await Quote.findOne({ user: id }).lean().exec()
-    if (Quote) {
-        return res.status(400).json({ message: 'User has assigned quotes' })
-    }
+    // // Does the user still have assigned quotes?
+    // const note = await Note.findOne({ user: id }).lean().exec()
+    // if (note) {
+    //     return res.status(400).json({ message: 'User has assigned notes' })
+    // }
 
-    // Does the user exist to delete?
-    const user = await User.findById(id).exec()
+//     // Does the user exist to delete?
+//     const user = await User.findById(id).exec()
 
-    if (!user) {
-        return res.status(400).json({ message: 'User not found' })
-    }
+//     if (!user) {
+//         return res.status(400).json({ message: 'User not found' })
+//     }
 
-    const result = await user.deleteOne()
+//     const result = await user.deleteOne()
 
-    const reply = `Username ${result.username} with ID ${result._id} deleted`
+//     const reply = `Username ${result.username} with ID ${result._id} deleted`
 
-    res.json(reply)
-})
+//     res.json(reply)
+// })
 
 module.exports = {
-    getAllUsers,
-    createNewUser,
-    updateUser,
-    deleteUser
+    getAllQuotes,
+    createNewQuote,
+    updateQuote,
 }

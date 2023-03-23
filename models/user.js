@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+// mimic whats on the sign up sheet 
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -45,5 +45,3 @@ const userSchema = new mongoose.Schema({
     }
     
 })
-
-module.exports = mongoose.model('User', userSchema)

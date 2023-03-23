@@ -1,5 +1,6 @@
 //lesson 3
-
+// should mimic quote form 
+// connect to user 
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
@@ -42,8 +43,8 @@ const noteSchema = new mongoose.Schema(
     }
 )
 
-noteSchema.plugin(AutoIncrement, {
-    inc_field: 'ticket',
-    id: 'ticketNums',
+quoteSchema.plugin(AutoIncrement, {
+    inc_field: 'id',
+    id: 'idNumber',
     start_seq: 500
 })
