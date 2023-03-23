@@ -11,6 +11,10 @@ const noteSchema = new mongoose.Schema(
             required: true,
             ref: 'User'
         },
+        id: {
+            type: int,
+            required: true,
+        },
         galReq: {
             type: float,
             required: true,
@@ -43,8 +47,8 @@ const noteSchema = new mongoose.Schema(
     }
 )
 
-noteSchema.plugin(AutoIncrement, {
-    inc_field: 'ticket',
-    id: 'ticketNums',
+quoteSchema.plugin(AutoIncrement, {
+    inc_field: 'id',
+    id: 'idNumber',
     start_seq: 500
 })
