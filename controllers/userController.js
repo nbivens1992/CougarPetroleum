@@ -94,33 +94,33 @@ const updateQuote = asyncHandler(async (req, res) => {
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-// const deleteQuote = asyncHandler(async (req, res) => {
-//     const { id } = req.body
+const deleteUser = asyncHandler(async (req, res) => {
+    const { id } = req.body
 
-//     // Confirm data
-//     if (!id) {
-//         return res.status(400).json({ message: 'User ID Required' })
-//     }
+    // Confirm data
+    if (!id) {
+        return res.status(400).json({ message: 'User ID Required' })
+    }
 
-    // // Does the user still have assigned quotes?
-    // const note = await Note.findOne({ user: id }).lean().exec()
-    // if (note) {
-    //     return res.status(400).json({ message: 'User has assigned notes' })
-    // }
+    // Does the user still have assigned quotes?
+    const note = await Note.findOne({ user: id }).lean().exec()
+    if (note) {
+        return res.status(400).json({ message: 'User has assigned notes' })
+    }
 
-//     // Does the user exist to delete?
-//     const user = await User.findById(id).exec()
+    // Does the user exist to delete?
+    const user = await User.findById(id).exec()
 
-//     if (!user) {
-//         return res.status(400).json({ message: 'User not found' })
-//     }
+    if (!user) {
+        return res.status(400).json({ message: 'User not found' })
+    }
 
-//     const result = await user.deleteOne()
+    const result = await user.deleteOne()
 
-//     const reply = `Username ${result.username} with ID ${result._id} deleted`
+    const reply = `Username ${result.username} with ID ${result._id} deleted`
 
-//     res.json(reply)
-// })
+    res.json(reply)
+})
 
 module.exports = {
     getAllQuotes,
