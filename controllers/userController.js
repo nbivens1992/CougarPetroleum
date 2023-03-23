@@ -123,7 +123,9 @@ const deleteUser = asyncHandler(async (req, res) => {
 })
 
 module.exports = {
-    getAllQuotes,
-    createNewQuote,
-    updateQuote,
+    getAllUsers,
+    createNewUser,
+    updateUser,
+    deleteUser
 }
+

@@ -74,3 +74,10 @@ const updateQuote = asyncHandler(async (req, res) => {
 
     res.json(`Quote updated`)
 })
+
+module.exports = {
+    getAllQuotes,
+    createNewQuote,
+    updateQuote,
+    // deletQuote
+}
