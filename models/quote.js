@@ -15,11 +15,11 @@ const quoteSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
-        dAddress: {
-            _id: mongoose.Schema.Types.ObjectId,
-            references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address1'},
-            address1: { type: String, required: true, maxlength: 100}
-        },
+        // dAddress: {
+        //     _id: mongoose.Schema.Types.ObjectId,
+        //     references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address1'},
+        //     address1: { type: String, required: true, maxlength: 100}
+        // },
         dDate: {
             type: Date,
             required: true
@@ -43,8 +43,4 @@ const quoteSchema = new mongoose.Schema(
     }
 )
 
-quoteSchema.plugin(AutoIncrement, {
-    inc_field: 'id',
-    id: 'idNumber',
-    start_seq: 500
-})
+module.exports = mongoose.model('Quote', quoteSchema)
