@@ -42,3 +42,35 @@ const createNewQuote = asyncHandler(async (req, res) => {
         res.status(400).json({ message: 'Quote creation failed' })
     }
 })
+
+// @desc Update a note
+// @route PATCH /notes
+// @access Private
+const updateQuote = asyncHandler(async (req, res) => {
+    const { id, galReq, dAddress, dDate, completed} = req.body
+
+    // Confirm data
+    if (!id || !galReq|| !dAddress || !dDate || typeof completed !== 'boolean') {
+        return res.status(400).json({ message: 'All fields are required' })
+    }
+
+    // Confirm note exists to update
+    const note = await Quote.findById(id).exec()
+
+    if (!note) {
+        return res.status(400).json({ message: 'Quote not found' })
+    }
+
+    // Check for duplicate title
+    const duplicate = await Quote.findOne({id}).lean().exec()
+
+
+    quote.dAddress = text
+    quote.galReq = galReq
+    quote.dDate = dDate
+    quote.completed = completed
+
+    const updatedQuote = await quote.save()
+
+    res.json(`Quote updated`)
+})
