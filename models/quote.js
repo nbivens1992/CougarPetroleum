@@ -16,8 +16,8 @@ const noteSchema = new mongoose.Schema(
         },
         dAddress: {
             _id: mongoose.Schema.Types.ObjectId,
-            references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address'},
-            address: { type: String, required: true, maxlength: 100}
+            references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address1'},
+            address1: { type: String, required: true, maxlength: 100}
         },
         dDate: {
             type: Date,

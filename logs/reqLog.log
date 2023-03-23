@@ -96,3 +96,6 @@
 20230323	12:05:06	972c62e9-2bd7-4e7e-bb11-f49303a3ae2f	DELETE	/users	undefined
 20230323	12:05:15	867b3958-63c7-4a51-b150-1fa6b8a4ce39	DELETE	/users	undefined
 20230323	12:06:14	7a067440-f822-427c-b4a6-70534046ee9c	DELETE	/users	undefined
+20230323	14:29:37	8f1cfa0f-bfbf-43ea-909d-d3cb1ea11a55	GET	/	undefined
+20230323	14:29:37	78f1244f-ac2f-4403-93c4-638a4a3361ab	GET	/img/CougarPetroleum.png	undefined
+20230323	14:29:37	2e8f4c90-4087-4669-9e95-63a2eac2b2c9	GET	/favicon.ico	undefined
