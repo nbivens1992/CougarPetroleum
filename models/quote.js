@@ -4,7 +4,7 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
-const noteSchema = new mongoose.Schema(
+const quoteSchema = new mongoose.Schema(
     {
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -12,7 +12,7 @@ const noteSchema = new mongoose.Schema(
             ref: 'User'
         },
         galReq: {
-            type: float,
+            type: Number,
             required: true,
         },
         dAddress: {
@@ -25,11 +25,11 @@ const noteSchema = new mongoose.Schema(
             required: true
         },
         sPrice: {
-            type: float,
-            required: true
+            type: Number,
+            require: true
         },
         amountDue: {
-            type: float,
+            type: Number,
             required: false
         },
         completed: {
