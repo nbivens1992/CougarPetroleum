@@ -11,18 +11,32 @@ const noteSchema = new mongoose.Schema(
             required: true,
             ref: 'User'
         },
-        title: {
-            type: String,
+        galReq: {
+            type: float,
+            required: true,
+        },
+        dAddress: {
+            _id: mongoose.Schema.Types.ObjectId,
+            references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address1'},
+            address1: { type: String, required: true, maxlength: 100}
+        },
+        dDate: {
+            type: Date,
             required: true
         },
-        text: {
-            type: String,
+        sPrice: {
+            type: float,
             required: true
+        },
+        amountDue: {
+            type: float,
+            required: false
         },
         completed: {
             type: Boolean,
             default: false
         }
+
     },
     {
         timestamps: true

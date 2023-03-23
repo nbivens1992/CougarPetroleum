@@ -22,10 +22,10 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    const { username, password, roles } = req.body
+    const { username, password, fullName, address1, address2, city,state,zip } = req.body
 
     // Confirm data
-    if (!username || !password || !Array.isArray(roles) || !roles.length) {
+    if (!username || !password || !fullName || !address1 || !city || !state || !zip ) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
@@ -39,7 +39,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     // Hash password 
     const hashedPwd = await bcrypt.hash(password, 10) // salt rounds
 
-    const userObject = { username, "password": hashedPwd, roles }
+    const userObject = { username, "password": hashedPwd }
 
     // Create and store new user 
     const user = await User.create(userObject)
@@ -102,7 +102,7 @@ const deleteUser = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'User ID Required' })
     }
 
-    // // Does the user still have assigned notes?
+    // // Does the user still have assigned quotes?
     // const note = await Note.findOne({ user: id }).lean().exec()
     // if (note) {
     //     return res.status(400).json({ message: 'User has assigned notes' })
