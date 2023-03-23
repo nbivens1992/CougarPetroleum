@@ -11,10 +11,6 @@ const noteSchema = new mongoose.Schema(
             required: true,
             ref: 'User'
         },
-        id: {
-            type: int,
-            required: true,
-        },
         galReq: {
             type: float,
             required: true,
