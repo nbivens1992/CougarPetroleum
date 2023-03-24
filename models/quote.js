@@ -4,7 +4,7 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
-const noteSchema = new mongoose.Schema(
+const quoteSchema = new mongoose.Schema(
     {
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -12,24 +12,24 @@ const noteSchema = new mongoose.Schema(
             ref: 'User'
         },
         galReq: {
-            type: float,
+            type: Number,
             required: true,
         },
-        dAddress: {
-            _id: mongoose.Schema.Types.ObjectId,
-            references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address1'},
-            address1: { type: String, required: true, maxlength: 100}
-        },
+        // dAddress: {
+        //     _id: mongoose.Schema.Types.ObjectId,
+        //     references: { type: mongoose.Schema.Types.ObjectId, refPath: 'address1'},
+        //     address1: { type: String, required: true, maxlength: 100}
+        // },
         dDate: {
             type: Date,
             required: true
         },
         sPrice: {
-            type: float,
-            required: true
+            type: Number,
+            require: true
         },
         amountDue: {
-            type: float,
+            type: Number,
             required: false
         },
         completed: {
@@ -43,8 +43,4 @@ const noteSchema = new mongoose.Schema(
     }
 )
 
-quoteSchema.plugin(AutoIncrement, {
-    inc_field: 'id',
-    id: 'idNumber',
-    start_seq: 500
-})
+module.exports = mongoose.model('Quote', quoteSchema)

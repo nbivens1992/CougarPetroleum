@@ -1,12 +1,12 @@
 const User = require('../models/User')
-const Quote = require('../models/Note')
+const Quote = require('../models/Quote')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 
 // @desc Get all users
 // @route GET /users
 // @access Private
-const getAllQuotes = asyncHandler(async (req, res) => {
+const getAllUsers = asyncHandler(async (req, res) => {
     // Get all users from MongoDB
     const users = await User.find().select('-password').lean()
 
@@ -21,7 +21,7 @@ const getAllQuotes = asyncHandler(async (req, res) => {
 // @desc Create new user
 // @route POST /users
 // @access Private
-const createNewQuote = asyncHandler(async (req, res) => {
+const createNewUser = asyncHandler(async (req, res) => {
     const { username, password, fullName, address1, address2, city,state,zip } = req.body
 
     // Confirm data
@@ -54,11 +54,11 @@ const createNewQuote = asyncHandler(async (req, res) => {
 // @desc Update a user
 // @route PATCH /users
 // @access Private
-const updateQuote = asyncHandler(async (req, res) => {
-    const { id, username, roles, active, password } = req.body
+const updateUser = asyncHandler(async (req, res) => {
+    const { id, username, password, fullName, address1, city,state,zip } = req.body
 
     // Confirm data 
-    if (!id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean') {
+    if (!id || !username || !fullName || !address1 || !city || !state || !zip) {
         return res.status(400).json({ message: 'All fields except password are required' })
     }
 
@@ -78,8 +78,12 @@ const updateQuote = asyncHandler(async (req, res) => {
     }
 
     user.username = username
-    user.roles = roles
-    user.active = active
+    user.fullName = fullName
+    user.address1 = address1
+    user.city = city
+    user.state = state
+    user.zip = zip
+
 
     if (password) {
         // Hash password 
@@ -103,9 +107,9 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 
     // Does the user still have assigned quotes?
-    const note = await Note.findOne({ user: id }).lean().exec()
-    if (note) {
-        return res.status(400).json({ message: 'User has assigned notes' })
+    const quote = await Quote.findOne({ user: id }).lean().exec()
+    if (quote) {
+        return res.status(400).json({ message: 'User has assigned quotes' })
     }
 
     // Does the user exist to delete?
