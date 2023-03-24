@@ -107,8 +107,8 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 
     // Does the user still have assigned quotes?
-    const Quote = await Quote.findOne({ user: id }).lean().exec()
-    if (Quote) {
+    const quote = await Quote.findOne({ user: id }).lean().exec()
+    if (quote) {
         return res.status(400).json({ message: 'User has assigned quotes' })
     }
 

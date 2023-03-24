@@ -206,3 +206,13 @@
 20230324	00:48:45	4b699d85-11d1-4ee1-9bc0-2861275cb185	PATCH	/users	undefined
 20230324	00:48:58	c7afed43-cd95-407d-80dc-ce8cd6c1289c	PATCH	/users	undefined
 20230324	00:49:28	89f663d9-0ff7-4c7d-a800-76709c7e92d5	PATCH	/users	undefined
+20230324	00:54:44	0e900c3d-4018-429f-a488-d75cda03d513	GET	/users	undefined
+20230324	00:55:27	c2bb2119-ae9b-404a-880d-77fc6576c07f	PATCH	/users	undefined
+20230324	01:11:43	c4254fb2-c3d0-4f10-8f8a-fcc80df8ab4e	GET	/users	undefined
+20230324	01:13:09	1a38ec50-f6d7-48ec-af38-522b608ca951	DELETE	/users	undefined
+20230324	01:14:12	e3969d51-3072-48f3-974b-8555d72708ad	DELETE	/users	undefined
+20230324	01:14:44	e5ec6a8c-2a7f-4134-90fd-3a39aff9c524	GET	/users	undefined
+20230324	01:15:13	d424dc1e-bb64-4015-a899-3db9237bfe4d	DELETE	/users	undefined
+20230324	01:15:18	922e49e1-da01-4001-b78e-ab37926d1070	DELETE	/users	undefined
+20230324	01:15:22	e53e875a-a201-4ae6-bf84-f1e7fa0a1656	DELETE	/users	undefined
+20230324	01:15:30	1577509a-ff07-40ff-89b2-b3ae95885039	GET	/users	undefined
