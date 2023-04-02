@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const AutoIncrement = require('mongoose-sequence')(mongoose)
 // mimic whats on the sign up sheet 
-const userSchema = new mongoose.Schema({
+const userInfoSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
@@ -40,4 +41,4 @@ const userSchema = new mongoose.Schema({
     }
     
 })
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('UserInfo', userInfoSchema)

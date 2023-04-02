@@ -1,5 +1,4 @@
 const User = require('../models/User')
-const Quote = require('../models/Quote')
 const UserInfo = require('../models/userInfo')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
@@ -9,7 +8,7 @@ const bcrypt = require('bcrypt')
 // @access Private
 const getAllUserInfo = asyncHandler(async (req, res) => {
     // Get all users from MongoDB
-    const users = await UserInfo.find().select('-password').lean()
+    const users = await UserInfo.find().lean()
 
     // If no users 
     if (!users?.length) {
@@ -23,26 +22,20 @@ const getAllUserInfo = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUserInfo = asyncHandler(async (req, res) => {
-    const {fullName, address1, address2, city,state,zip } = req.body
+    const {user, fullName, address1, address2, city,state,zip } = req.body
 
     // Confirm data
-    if (!fullName || !address1 || !city || !state || !zip ) {
+    if (!user|| !fullName || !address1 || !city || !state || !zip ) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
-    // Check for duplicate username
-    const duplicate = await UserInfo.findOne({ username }).lean().exec()
+    // create user object
+    const userObject = {user,fullName, address1, address2, city, state, zip}
 
-    if (duplicate) {
-        return res.status(409).json({ message: 'Duplicate username' })
-    }
+    // Create and store new userInfo
+    const userInfo = await User.create(userObject)
 
-    const userObject = {fullName, address1, address2, city, state, zip}
-
-    // Create and store new user 
-    const user = await User.create(userObject)
-
-    if (user) { //created 
+    if (userInfo) { //created 
         res.status(201).json({ message: `New user ${username} created` })
     } else {
         res.status(400).json({ message: 'Invalid user data received' })
@@ -57,7 +50,7 @@ const updateUserInfo = asyncHandler(async (req, res) => {
 
     // Confirm data 
     if (!id || !username || !fullName || !address1 || !city || !state || !zip) {
-        return res.status(400).json({ message: 'All fields except password are required' })
+        return res.status(400).json({ message: 'All fields are required' })
     }
 
     // Does the user exist to update?

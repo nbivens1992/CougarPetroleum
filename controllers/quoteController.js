@@ -30,7 +30,7 @@ const createNewQuote = asyncHandler(async (req, res) => {
 
 
     // Confirm data
-    if (!galReq|| !dDate || !sPrice) {
+    if (!user || !galReq|| !dDate || !sPrice) {
         return res.status(400).json({ message: 'Not all required fields are filled' })
     }
 
