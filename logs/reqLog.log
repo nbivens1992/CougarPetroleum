@@ -265,3 +265,12 @@
 20230324	01:15:22	e53e875a-a201-4ae6-bf84-f1e7fa0a1656	DELETE	/users	undefined
 20230324	01:15:30	1577509a-ff07-40ff-89b2-b3ae95885039	GET	/users	undefined
 >>>>>>> 1b3ad80cece189ea19454c1c27d1e4d641560b1d
+20230402	16:38:51	e13d8e93-1267-4f53-8047-b5a561a0a16a	GET	/	undefined
+20230402	16:38:51	cc478ace-4cde-489b-9139-5f4aecb58644	GET	/img/CougarPetroleum.png	undefined
+20230402	16:38:51	9c723d9e-ef61-4a5e-a3f1-87f859c1d130	GET	/favicon.ico	undefined
+20230402	16:39:49	853f5792-b106-47b8-896b-6ba93b8ea8b4	GET	/pages/QuoteHistory.html	undefined
+20230402	16:39:49	3f936f03-602f-4c92-aa96-1055514d9d56	GET	/img/CougarPetroleum.png	undefined
+20230402	16:40:02	38e13851-93dc-42cb-b4f1-e87ec13521d6	GET	/pages/QuoteHistory.html	undefined
+20230402	16:40:02	6081727d-6ca8-4959-833e-70cb847c2a21	GET	/img/CougarPetroleum.png	undefined
+20230402	16:40:05	d7da25a2-c572-4be2-90cc-2b986e065571	GET	/pages/signUpForm.html	undefined
+20230402	16:40:05	b53690d5-f542-4c8e-90c1-cfbdd2268f2e	GET	/CSS/signUpstyles.css	undefined
