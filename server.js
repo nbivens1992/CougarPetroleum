@@ -34,6 +34,10 @@ app.use('/quotes', require('./routes/quoteRoutes'))
 
 app.use('/userInfo', require('./routes/userInfoRoutes'))
 
+app.get('/info',(req, res) => {
+    res.status(200).json({info: 'got info'})
+})
+
 app.all('*', (req, res) => {
     res.status(404)
     if (req.accepts('html')) {

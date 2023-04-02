@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+        img {
+            max-width: auto;
+            height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        } 
+        form {
+            border: 3px solid #0A0A0A;
+            background-color:  #d89b00;
+
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0A0A0A;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        .container {
+            padding: 16px;
+          }
+
+        body {
+            display: table-cell;
+            margin: auto;
+            top: 50%;
+            width: 60%;
+            background-color: #960c22;
+            padding: 10px;
+        }
+        head {
+            margin: auto;
+            width: 60%;
+            background-color: #960c22;
+            padding: 30px;
+        }
+    </style>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <img src="/img/CougarPetroleum.png">
+    </head>
+
+    <body> 
+        <div class="container" style="color:Black">
+            <h1>Welcome to Cougar Petroleum</h1>
+        </div>
+        <div class="container">
+            <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
+               
+                    <div class="form-group has-success">
+                        <label for="uname" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Username</b></label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
+                        </div>
+                    </div>
+                    <div class="form-group has-success">
+                        <label for="psw" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Password</b></label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                            <EI-INJECT-HIDDEN-INPUT-FILEDS/>
+                        </div>
+                    </div>
+                    <div class="form-group has-success"></div>
+                        <button id = "Login_button" type ="submit" name="login" value="true" onClick="window.location.href='/pages/QuoteHistory.html';">
+                            Log in
+                        </button>
+                        <EI-LOGINFIRSTTIME>
+                            <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
+                            <button onClick="window.location.href='/pages/signUpForm.html';">
+                                Join Now  
+                            </button> 
+                        </EI-LOGINFIRSTTIME>
+                        <div>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                            
+                            <EI-LOGINFAILED>
+                                <p style ="color:#0A0A0A"> Login information is invalid</p>
+                            </EI-LOGINFAILED>
+                            <EI-INTERNAL-CUSTOM-FORM-ERROR/>  
+                        </div>
+                     </div>
+                
+            </form>
+        </div>
+    </body>
+    
+</html>
