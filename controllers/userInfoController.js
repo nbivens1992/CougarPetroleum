@@ -30,13 +30,13 @@ const createNewUserInfo = asyncHandler(async (req, res) => {
     }
 
     // create user object
-    const userObject = {user,fullName, address1, address2, city, state, zip}
+    const userObject = {user, fullName, address1, address2, city, state, zip}
 
     // Create and store new userInfo
-    const userInfo = await User.create(userObject)
+    const userInfo = await UserInfo.create(userObject)
 
     if (userInfo) { //created 
-        res.status(201).json({ message: `New user ${username} created` })
+        res.status(201).json({ message: `New user ${fullName} created` })
     } else {
         res.status(400).json({ message: 'Invalid user data received' })
     }
@@ -46,44 +46,39 @@ const createNewUserInfo = asyncHandler(async (req, res) => {
 // @route PATCH /users
 // @access Private
 const updateUserInfo = asyncHandler(async (req, res) => {
-    const { id, username, password, fullName, address1, city,state,zip } = req.body
+    const { id, user, fullName, address1, address2, city, state, zip } = req.body
 
     // Confirm data 
-    if (!id || !username || !fullName || !address1 || !city || !state || !zip) {
+    if (!id ||!user|| !fullName || !address1 || !city || !state || !zip) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
-    // Does the user exist to update?
-    const user = await User.findById(id).exec()
+    // Does the userInfo exist to update?
+    const userInfo = await UserInfo.findById(id).exec()
 
-    if (!user) {
+    if (!userInfo) {
         return res.status(400).json({ message: 'User not found' })
     }
 
     // Check for duplicate 
-    const duplicate = await User.findOne({ username }).lean().exec()
+    const duplicate = await UserInfo.findOne({ fullName }).lean().exec()
 
     // Allow updates to the original user 
     if (duplicate && duplicate?._id.toString() !== id) {
         return res.status(409).json({ message: 'Duplicate username' })
     }
 
-    user.username = username
-    user.fullName = fullName
-    user.address1 = address1
-    user.city = city
-    user.state = state
-    user.zip = zip
+    userInfo.user = user
+    userInfo.fullName = fullName
+    userInfo.address1 = address1
+    userInfo.address2 = address2
+    userInfo.city = city
+    userInfo.state = state
+    userInfo.zip = zip
 
+    const updatedUser = await userInfo.save()
 
-    if (password) {
-        // Hash password 
-        user.password = await bcrypt.hash(password, 10) // salt rounds 
-    }
-
-    const updatedUser = await user.save()
-
-    res.json({ message: `${updatedUser.username} updated` })
+    res.json({ message: `${updatedUser.fullName} updated` })
 })
 
 // @desc Delete a user

@@ -41,4 +41,4 @@ const userInfoSchema = new mongoose.Schema({
     }
     
 })
-module.exports = mongoose.model('UserInfo', userInfoSchema)
+module.exports = mongoose.model('userInfo', userInfoSchema)

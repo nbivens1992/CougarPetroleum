@@ -313,6 +313,7 @@
 20230402	16:09:33	7758dc0f-6526-4c74-b49a-b4ef03ba9b48	POST	/UserInfo	undefined
 20230402	16:09:38	630247b1-1795-4f6f-9bd8-4f98e3e4a198	POST	/UserInfo	undefined
 20230402	16:12:54	ad66c7cc-ae51-4bbc-bc34-8030797aed41	POST	/UserInfo	undefined
+<<<<<<< Updated upstream
 >>>>>>> f05c1f4b36741a44e46ea54ea2b62d89daa5119b
 20230402	16:51:27	5a0fffd6-36d3-4465-b23f-c15064715ca1	GET	/	undefined
 20230402	16:51:27	5863ae8c-ec21-4f1c-a252-2551d9adc0dd	GET	/img/CougarPetroleum.png	undefined
@@ -320,3 +321,28 @@
 20230402	16:51:29	96b9ce53-74fa-4a53-b494-c0e16519c4c5	GET	/CSS/signUpstyles.css	undefined
 20230402	16:51:31	70f7b50d-3de6-44b2-9af9-ba4558f9ef96	GET	/pages/QuoteHistory.html	undefined
 20230402	16:51:31	eaa0511f-4c07-4a15-874c-3301a83d0993	GET	/img/CougarPetroleum.png	undefined
+=======
+20230402	16:15:10	f6576b9b-2f13-4c03-8e75-24eb434e7b24	POST	/UserInfo	undefined
+20230402	16:15:55	9b04bed8-5af6-410d-bc1d-292f1399b043	POST	/userInfo	undefined
+20230402	16:17:11	17ce28e6-bfbd-4b50-b375-3be391c9d29b	POST	/userInfo	undefined
+20230402	16:20:21	131fccdf-7e56-46f1-b7a0-d956de6d4e0f	POST	/userInfo	undefined
+20230402	16:23:44	ba9730e3-7d53-43f6-9ac8-8259941ab682	POST	/userInfo	undefined
+20230402	16:25:01	ba8444ce-31f6-4539-8097-60718122222c	POST	/userInfo	undefined
+20230402	16:25:15	7710d271-4399-43ee-a6b5-f2e621e03f5c	POST	/UserInfo	undefined
+20230402	16:26:18	09e8302c-3b8e-4744-ae7c-85948a3943d6	POST	/UserInfo	undefined
+20230402	16:28:24	f8caad71-2a4d-46ae-b5a8-288e77965876	POST	/quotes	undefined
+20230402	16:31:33	8f07e286-7365-441b-8b2c-a3d81ae696c1	POST	/users	undefined
+20230402	16:32:36	5d17f4ad-8cee-437f-819f-cbe03fe17bc4	POST	/userInfo	undefined
+20230402	16:47:34	58a08791-1d7b-4541-8fbf-54b37b3efd22	PATCH	/userInfo	undefined
+20230402	16:48:03	5ab5e050-4b7b-49c4-8fc7-21b1a84dceba	PATCH	/userInfo	undefined
+20230402	16:48:39	e2a11a9e-7e39-4913-8bb0-52409407c33c	PATCH	/userInfo	undefined
+20230402	16:49:29	e1b3b1f9-7370-4761-b64f-7df5897ee969	PATCH	/userInfo	undefined
+20230402	16:49:57	ab84b50f-a8b7-4213-b764-4f5a9e06c8fe	PATCH	/userInfo	undefined
+20230402	16:51:21	d8e624c4-1b55-4ea6-ac4a-d606db04a77f	PATCH	/userInfo	undefined
+20230402	16:51:56	91863bc0-aa60-4022-a6ad-ce7031789551	PATCH	/userInfo	undefined
+20230402	16:52:14	4cfe708c-355d-4f9c-b12d-3fe1d40f31e2	PATCH	/userInfo	undefined
+20230402	16:53:50	712e5181-7f84-4bd3-91c5-cce6d468626c	PATCH	/userInfo	undefined
+20230402	16:54:39	1fc43987-ec43-401c-a3de-6f95838c31d4	PATCH	/userInfo	undefined
+20230402	16:54:55	b0ca0405-6b11-474a-a15b-ba6edfb667b1	PATCH	/userInfo	undefined
+20230402	16:55:08	ef750a95-8881-4c82-9d70-0eb088d9e00f	PATCH	/userInfo	undefined
+>>>>>>> Stashed changes
