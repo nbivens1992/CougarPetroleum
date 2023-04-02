@@ -55,10 +55,10 @@ const createNewUser = asyncHandler(async (req, res) => {
 // @route PATCH /users
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
-    const { id, username, roles, active, password } = req.body
+    const { id, username, password, fullName, address1, city,state,zip } = req.body
 
     // Confirm data 
-    if (!id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean') {
+    if (!id || !username || !fullName || !address1 || !city || !state || !zip) {
         return res.status(400).json({ message: 'All fields except password are required' })
     }
 
@@ -78,8 +78,12 @@ const updateUser = asyncHandler(async (req, res) => {
     }
 
     user.username = username
-    user.roles = roles
-    user.active = active
+    user.fullName = fullName
+    user.address1 = address1
+    user.city = city
+    user.state = state
+    user.zip = zip
+
 
     if (password) {
         // Hash password 
@@ -103,8 +107,8 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 
     // Does the user still have assigned quotes?
-    const Quote = await Quote.findOne({ user: id }).lean().exec()
-    if (Quote) {
+    const quote = await Quote.findOne({ user: id }).lean().exec()
+    if (quote) {
         return res.status(400).json({ message: 'User has assigned quotes' })
     }
 
