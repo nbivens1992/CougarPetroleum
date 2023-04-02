@@ -31,15 +31,8 @@ const quoteSchema = new mongoose.Schema(
         amountDue: {
             type: Number,
             required: false
-        },
-        completed: {
-            type: Boolean,
-            default: false
         }
 
-    },
-    {
-        timestamps: true
     }
 )
 

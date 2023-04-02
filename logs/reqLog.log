@@ -265,3 +265,6 @@
 20230324	01:15:22	e53e875a-a201-4ae6-bf84-f1e7fa0a1656	DELETE	/users	undefined
 20230324	01:15:30	1577509a-ff07-40ff-89b2-b3ae95885039	GET	/users	undefined
 >>>>>>> 1b3ad80cece189ea19454c1c27d1e4d641560b1d
+20230402	15:08:35	fd2d58ad-24a5-4b54-92ee-c74452b834fb	POST	/user	undefined
+20230402	15:13:20	22ae27fe-dc1e-4217-8e68-cb555e96dd07	POST	/user	undefined
+20230402	15:13:45	19564caa-8bf0-4cdb-9247-4840e85a95c3	POST	/user	undefined

@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const Quote = require('../models/Quote')
+const UserInfo = require('../models/userInfo')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 
@@ -22,10 +23,10 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    const { username, password, fullName, address1, address2, city,state,zip } = req.body
+    const { username, password} = req.body
 
     // Confirm data
-    if (!username || !password || !fullName || !address1 || !city || !state || !zip ) {
+    if (!username || !password ) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
@@ -39,7 +40,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     // Hash password 
     const hashedPwd = await bcrypt.hash(password, 10) // salt rounds
 
-    const userObject = { username, "password": hashedPwd, fullName, address1, address2, city, state, zip}
+    const userObject = { username, "password": hashedPwd}
 
     // Create and store new user 
     const user = await User.create(userObject)
@@ -55,10 +56,10 @@ const createNewUser = asyncHandler(async (req, res) => {
 // @route PATCH /users
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
-    const { id, username, password, fullName, address1, city,state,zip } = req.body
+    const { id, username, password} = req.body
 
     // Confirm data 
-    if (!id || !username || !fullName || !address1 || !city || !state || !zip) {
+    if (!id || !username ) {
         return res.status(400).json({ message: 'All fields except password are required' })
     }
 
@@ -78,13 +79,7 @@ const updateUser = asyncHandler(async (req, res) => {
     }
 
     user.username = username
-    user.fullName = fullName
-    user.address1 = address1
-    user.city = city
-    user.state = state
-    user.zip = zip
-
-
+    
     if (password) {
         // Hash password 
         user.password = await bcrypt.hash(password, 10) // salt rounds 
@@ -111,6 +106,13 @@ const deleteUser = asyncHandler(async (req, res) => {
     if (quote) {
         return res.status(400).json({ message: 'User has assigned quotes' })
     }
+
+    // need to delete user table
+    const userInfo = await UserInfo.findOne({ user: id }).lean().exec()
+    if (userInfo) {
+        return res.status(400).json({ message: 'User has user information to be deleted' })
+    }
+
 
     // Does the user exist to delete?
     const user = await User.findById(id).exec()

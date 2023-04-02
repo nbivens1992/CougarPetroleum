@@ -84,20 +84,14 @@ const deleteQuote = asyncHandler(async (req, res) => {
 
     // Confirm data
     if (!id) {
-        return res.status(400).json({ message: 'User ID Required' })
+        return res.status(400).json({ message: 'Quote ID Required' })
     }
 
-    // // Does the user still have assigned quotes?
-    const quote = await Quote.findOne({ user: id }).lean().exec()
-     if (quote) {
-         return res.status(400).json({ message: 'User has assigned notes' })
-     }
-
     // Does the user exist to delete?
-    const Quote = await Quote.findById(id).exec()
+    const quote = await Quote.findById(id).exec()
 
-    if (!Quote) {
-        return res.status(400).json({ message: 'User not found' })
+    if (!quote) {
+        return res.status(400).json({ message: 'Quote not found' })
     }
 
     const result = await Quote.deleteOne()
