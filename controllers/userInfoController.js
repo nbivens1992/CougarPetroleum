@@ -1,5 +1,4 @@
 const User = require('../models/User')
-const Quote = require('../models/Quote')
 const UserInfo = require('../models/userInfo')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
@@ -7,9 +6,9 @@ const bcrypt = require('bcrypt')
 // @desc Get all users
 // @route GET /users
 // @access Private
-const getAllUsers = asyncHandler(async (req, res) => {
+const getAllUserInfo = asyncHandler(async (req, res) => {
     // Get all users from MongoDB
-    const users = await User.find().select('-password').lean()
+    const users = await UserInfo.find().lean()
 
     // If no users 
     if (!users?.length) {
@@ -22,30 +21,21 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @desc Create new user
 // @route POST /users
 // @access Private
-const createNewUser = asyncHandler(async (req, res) => {
-    const { username, password} = req.body
+const createNewUserInfo = asyncHandler(async (req, res) => {
+    const {user, fullName, address1, address2, city,state,zip } = req.body
 
     // Confirm data
-    if (!username || !password ) {
+    if (!user|| !fullName || !address1 || !city || !state || !zip ) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
-    // Check for duplicate username
-    const duplicate = await User.findOne({ username }).lean().exec()
+    // create user object
+    const userObject = {user,fullName, address1, address2, city, state, zip}
 
-    if (duplicate) {
-        return res.status(409).json({ message: 'Duplicate username' })
-    }
+    // Create and store new userInfo
+    const userInfo = await User.create(userObject)
 
-    // Hash password 
-    const hashedPwd = await bcrypt.hash(password, 10) // salt rounds
-
-    const userObject = { username, "password": hashedPwd}
-
-    // Create and store new user 
-    const user = await User.create(userObject)
-
-    if (user) { //created 
+    if (userInfo) { //created 
         res.status(201).json({ message: `New user ${username} created` })
     } else {
         res.status(400).json({ message: 'Invalid user data received' })
@@ -55,12 +45,12 @@ const createNewUser = asyncHandler(async (req, res) => {
 // @desc Update a user
 // @route PATCH /users
 // @access Private
-const updateUser = asyncHandler(async (req, res) => {
-    const { id, username, password} = req.body
+const updateUserInfo = asyncHandler(async (req, res) => {
+    const { id, username, password, fullName, address1, city,state,zip } = req.body
 
     // Confirm data 
-    if (!id || !username ) {
-        return res.status(400).json({ message: 'All fields except password are required' })
+    if (!id || !username || !fullName || !address1 || !city || !state || !zip) {
+        return res.status(400).json({ message: 'All fields are required' })
     }
 
     // Does the user exist to update?
@@ -79,7 +69,13 @@ const updateUser = asyncHandler(async (req, res) => {
     }
 
     user.username = username
-    
+    user.fullName = fullName
+    user.address1 = address1
+    user.city = city
+    user.state = state
+    user.zip = zip
+
+
     if (password) {
         // Hash password 
         user.password = await bcrypt.hash(password, 10) // salt rounds 
@@ -93,45 +89,32 @@ const updateUser = asyncHandler(async (req, res) => {
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-const deleteUser = asyncHandler(async (req, res) => {
+const deleteUserInfo = asyncHandler(async (req, res) => {
     const { id } = req.body
 
     // Confirm data
     if (!id) {
-        return res.status(400).json({ message: 'User ID Required' })
+        return res.status(400).json({ message: 'Quote ID Required' })
     }
-
-    // Does the user still have assigned quotes?
-    const quote = await Quote.findOne({ user: id }).lean().exec()
-    if (quote) {
-        return res.status(400).json({ message: 'User has assigned quotes' })
-    }
-
-    // need to delete user table
-    const userInfo = await UserInfo.findOne({ user: id }).lean().exec()
-    if (userInfo) {
-        return res.status(400).json({ message: 'User has user information to be deleted' })
-    }
-
 
     // Does the user exist to delete?
-    const user = await User.findById(id).exec()
+    const userInfo = await UserInfo.findById(id).exec()
 
-    if (!user) {
+    if (!userInfo) {
         return res.status(400).json({ message: 'User not found' })
     }
 
-    const result = await user.deleteOne()
+    const result = await userInfo.deleteOne()
 
-    const reply = `Username ${result.username} with ID ${result._id} deleted`
+    const reply = `User Info ${result.fullName} with ID ${result._id} deleted`
 
     res.json(reply)
 })
 
 module.exports = {
-    getAllUsers,
-    createNewUser,
-    updateUser,
-    deleteUser
+    getAllUserInfo,
+    createNewUserInfo,
+    updateUserInfo,
+    deleteUserInfo
 }
 
