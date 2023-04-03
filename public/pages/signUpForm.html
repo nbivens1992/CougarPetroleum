@@ -21,8 +21,14 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
 
+            <label for="Username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required  maxlength="50">
+
+            <label for="Password"><b>Password</b></label>
+            <input type="text" placeholder="Enter Full Name" name="password" required  maxlength="50">
+
             <label for="Full Name"><b>Full Name</b></label>
-            <input type="text" placeholder="Enter Full Name" name="First Name" required  maxlength="50">
+            <input type="text" placeholder="Enter Full Name" name="full name" required  maxlength="50">
 
             <label for="address"><b>Address 1</b></label>
             <input type="text" placeholder="Enter Address" name="address" required maxlength="100">
@@ -103,19 +109,7 @@
 
         <div class="clearfix">
         <button type="button" class="cancelbtn" onClick="window.location.href='/CougarPetroleum/index.html';">Cancel</button>
-        <button type="submit" id="signupbutton" class="signupbtn" onClick="window.location.href='/CougarPetroleum/index.html';">Sign Up</button>
-        <script> 
-            const signup = document.getElementById('signupbutton')
-            const baseUrl = 'http://localhost:3500/'
-            signup.addEventListener('click',getInfo)
-            async function getInfo(){
-                const res = await fetch(baseUrl,
-                {
-                    method: 'GET'
-                })
-                console.log(res)
-            }
-        </script>
+        <button type="submit" class="signupbtn" onClick="window.location.href='/CougarPetroleum/index.html';">Sign Up</button>
         </div>
     </div>
 </form>

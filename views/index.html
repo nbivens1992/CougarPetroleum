@@ -101,7 +101,7 @@
             <h1>Welcome to Cougar Petroleum</h1>
         </div>
         <div class="container">
-            <form method="POST"  action="/index" class="form-horizontal">
+            <form method="POST"  class="form-horizontal">
                     <div class="form-group has-success">
                         <label for="uname" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Username</b></label>
                         <div class="col-sm-6">
@@ -112,11 +112,10 @@
                         <label for="psw" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Password</b></label>
                         <div class="col-sm-6">
                             <input id= "psw" type="password" class="form-control" placeholder="Enter Password" name="psw" required>
-                            <EI-INJECT-HIDDEN-INPUT-FILEDS/>
                         </div>
                     </div>
                     <div class="form-group has-success"></div>
-                        <button id = "Login_button" type ="submit" name="login" value="true" onClick="window.location.href='/pages/QuoteHistory.html';">
+                        <button id = "Login_button" type ="submit" name="login" value="true" action="/index" >
                             Log in
                         </button>
                         <EI-LOGINFIRSTTIME>

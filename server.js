@@ -11,6 +11,7 @@ const corsOptions = require('./config/corsOptions')
 const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose')
 const User = require('./models/User')
+const bcrypt = require('bcrypt')
 const PORT = process.env.PORT || 3500
 
 
@@ -34,32 +35,32 @@ app.use('/', require('./routes/root'))
 
 app.use('/users', require('./routes/userRoutes'))
 
-
 app.use('/quotes', require('./routes/quoteRoutes'))
 
 app.use('/userInfo', require('./routes/userInfoRoutes'))
-
 
 app.post('/index', async (req, res) => {
     try{
         const foundUser = await User.findOne({ username: req.body.username });
         if (foundUser) {
-                let submittedPass = req.body.password; 
-                let storedPass = foundUser.password; 
-        
-                const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
-
-                if (passwordMatch) {
-                    let usrname = foundUser.username;
-                    res.send(`<div align ='center'><h2>login successful</h2></div><br><br><br><div align ='center'><h3>Hello ${usrname}</h3></div><br><br><div align='center'><a href='./login.html'>logout</a></div>`);
-                } else {
-                    res.status(400).json({ error: "password doesn't match" });
-                }
+            let submittedPass = req.body.psw; 
+            let storedPass = foundUser.password; 
+            
+            //const result = submittedPass===storedPass
+            const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
+            if (passwordMatch) {
+                res.redirect('/pages/QuoteHistory.html')
+            } else {
+                res.redirect('/pages/signUpForm.html')
+            }
+                
           } else {
-            res.status(400).json({ error: "User doesn't exist" });
+            
+            res.redirect('/pages/signUpForm.html')
           }
-        } catch (error) {
-          res.status(400).json({ error });
+        } 
+        catch (error) {
+            res.send("Internal server error");
         }
 });
 
