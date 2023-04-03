@@ -44,9 +44,6 @@ app.post('/index', async (req, res) => {
     try{
         const foundUser = await User.findOne({ username: req.body.username });
         if (foundUser) {
-            //check if password matches
-            const result = req.body.password === foundser.password;
-            if (result) {
                 let submittedPass = req.body.password; 
                 let storedPass = foundUser.password; 
         
@@ -56,11 +53,8 @@ app.post('/index', async (req, res) => {
                     let usrname = foundUser.username;
                     res.send(`<div align ='center'><h2>login successful</h2></div><br><br><br><div align ='center'><h3>Hello ${usrname}</h3></div><br><br><div align='center'><a href='./login.html'>logout</a></div>`);
                 } else {
-                    res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align ='center'><a href='./login.html'>login again</a></div>");
+                    res.status(400).json({ error: "password doesn't match" });
                 }
-            } else {
-              res.status(400).json({ error: "password doesn't match" });
-            }
           } else {
             res.status(400).json({ error: "User doesn't exist" });
           }
