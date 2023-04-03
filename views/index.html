@@ -101,18 +101,17 @@
             <h1>Welcome to Cougar Petroleum</h1>
         </div>
         <div class="container">
-            <form method="POST" enctype="application/x-www-form-urlencoded" action="authorize" class="form-horizontal">
-               
+            <form method="POST"  action="/index" class="form-horizontal">
                     <div class="form-group has-success">
                         <label for="uname" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Username</b></label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
+                            <input id= "userName" type="text" class="form-control" placeholder="Enter Username" name="username" required="required" /> 
                         </div>
                     </div>
                     <div class="form-group has-success">
                         <label for="psw" class="control-label col-sm-2" style="color: #0A0A0A;"><b>Password</b></label>
                         <div class="col-sm-6">
-                            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                            <input id= "psw" type="password" class="form-control" placeholder="Enter Password" name="psw" required>
                             <EI-INJECT-HIDDEN-INPUT-FILEDS/>
                         </div>
                     </div>
@@ -122,7 +121,7 @@
                         </button>
                         <EI-LOGINFIRSTTIME>
                             <!-- SHOULD CONTAIN LINK TO FORM FOR FIRST TIME USER-->
-                            <button onClick="window.location.href='/pages/signUpForm.html';">
+                            <button id="signUp_button" onClick="window.location.href='/pages/signUpForm.html';">
                                 Join Now  
                             </button> 
                         </EI-LOGINFIRSTTIME>

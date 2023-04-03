@@ -1,0 +1,165 @@
+<!-- - Fuel Quote Form with following fields: (We are not building pricing module yet)
+	- Gallons Requested (numeric, required)
+	- Delivery Address (Non-editable, comes from client profile)
+	- Delivery Date (Calender, date picker)
+	- Suggested Price / gallon (numeric non-editable, price will be calculated by Pricing Module - we are not building pricing module yet)
+	- Total Amount Due (numeric non-editable, calculated (gallons * price))
+	
+- Fuel Quote History
+	- Tabular display of all client quotes in the past. All fields from Fuel Quote are displayed.
+
+- You should have validations  place for required fields, field types, and field lengths.  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+  html {
+    display: table;
+    margin: auto;
+  }
+  body {
+    display: table-cell;
+    background-color: #960c22;
+    top: 50%;
+    width: 60%;
+    padding: 10px;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+  }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container{
+    padding: 16px;
+  }
+  td, th {
+    border: 1px solid #54585a;
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: #fff9d9; 
+  }
+  tr:nth-child(odd) {
+    background-color: #888b8d;
+  }
+  button {
+    display: block;
+    background-color: #0A0A0A;;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px auto;
+    border: none;
+    cursor: pointer;
+    width: 90%; 
+    opacity: 0.9;
+  }
+  img {
+    max-width: auto;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  h2{
+    text-align: center;
+  }
+  
+
+
+</style>
+  <img src="../img/CougarPetroleum.png">
+</head>
+<body class="center">
+    <div class ="center">
+        <h2>Fuel Quote History</h2>
+    </div>
+  
+    <div class = "container">
+      <table  class="center">
+        <tr>
+          <th>Gallons Requested</th>
+          <th>Delivery Address</th>
+          <th>Delivery Date</th>
+          <th>Suggested Price</th>
+          <th>Total Amount Due</th>
+
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <div class = "center" >
+        <button  onClick="window.location.href='/pages/FuelQuote.html';">
+          Request a Quote
+        </button>
+      </div>
+      <div class = "center">
+        <button  onClick="window.location.href='/index.html';">
+          Exit
+        </button>
+      </div>
+    </div>
+
+  </body>
+</html>
