@@ -45,9 +45,10 @@ app.post('/index', async (req, res) => {
         const foundUser = await User.findOne({ username: req.body.username });
         if (foundUser) {
             //check if password matches
+            const result = req.body.password === foundser.password;
+            if (result) {
                 let submittedPass = req.body.password; 
                 let storedPass = foundUser.password; 
-                
         
                 const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
 
@@ -57,8 +58,10 @@ app.post('/index', async (req, res) => {
                 } else {
                     res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align ='center'><a href='./login.html'>login again</a></div>");
                 }
+            } else {
+              res.status(400).json({ error: "password doesn't match" });
             }
-          else {
+          } else {
             res.status(400).json({ error: "User doesn't exist" });
           }
         } catch (error) {

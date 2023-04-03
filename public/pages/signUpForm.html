@@ -103,7 +103,19 @@
 
         <div class="clearfix">
         <button type="button" class="cancelbtn" onClick="window.location.href='/CougarPetroleum/index.html';">Cancel</button>
-        <button type="submit" class="signupbtn" onClick="window.location.href='/CougarPetroleum/index.html';">Sign Up</button>
+        <button type="submit" id="signupbutton" class="signupbtn" onClick="window.location.href='/CougarPetroleum/index.html';">Sign Up</button>
+        <script> 
+            const signup = document.getElementById('signupbutton')
+            const baseUrl = 'http://localhost:3500/'
+            signup.addEventListener('click',getInfo)
+            async function getInfo(){
+                const res = await fetch(baseUrl,
+                {
+                    method: 'GET'
+                })
+                console.log(res)
+            }
+        </script>
         </div>
     </div>
 </form>

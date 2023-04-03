@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 
-import signUpForm from './signUpForm.html'
+import index from './src/index.html'
 
 function App() {
   return (
     <Routes>
-        <Route path="signUpForm" element={<signUpForm />} >
+        <Route path="index" element={<index />} >
         </Route>
     </Routes>
   )
