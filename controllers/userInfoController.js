@@ -1,7 +1,6 @@
-const User = require('../models/User')
+const User = require('../models/user')
 const UserInfo = require('../models/userInfo')
 const asyncHandler = require('express-async-handler')
-const bcrypt = require('bcrypt')
 
 // @desc Get all users
 // @route GET /users

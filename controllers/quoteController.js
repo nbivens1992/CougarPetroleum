@@ -1,5 +1,5 @@
-const  Quote = require('../models/Quote')
-const User = require('../models/User')
+const  Quote = require('../models/quote')
+const User = require('../models/user')
 const asyncHandler = require('express-async-handler')
 
 // @desc Get all quote
@@ -14,7 +14,7 @@ const getAllQuotes = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'No quotes found' })
     }
 
-    const quotesWithUser = await Promise.all(quotes.map(async (note) => {
+    const quotesWithUser = await Promise.all(quotes.map(async (quote) => {
         const user = await User.findById(quote.user).lean().exec()
         return { ...quote, username: user.username }
     }))
@@ -46,8 +46,8 @@ const createNewQuote = asyncHandler(async (req, res) => {
     }
 })
 
-// @desc Update a note
-// @route PATCH /notes
+// @desc Update a quote
+// @route PATCH /quotes
 // @access Private
 const updateQuote = asyncHandler(async (req, res) => {
     const { id, galReq, dDate, completed} = req.body
@@ -57,7 +57,7 @@ const updateQuote = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
-    // Confirm note exists to update
+    // Confirm quote exists to update
     const quote = await Quote.findById(id).exec()
 
     if (!quote) {

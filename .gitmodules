@@ -1,0 +1,3 @@
+[submodule "CPFrontend"]
+	path = CPFrontend
+	url = https://github.com/nbivens1992/CPFrontend.git
