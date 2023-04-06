@@ -634,3 +634,7 @@
 20230406	10:19:22	96ff2667-2718-4080-8946-3130fd342253	GET	/quotes	http://localhost:3000
 20230406	10:19:41	e9635983-d314-4ecf-ba3d-b54cc0036220	GET	/quotes	http://localhost:3000
 20230406	10:22:16	529acaf2-830c-4707-8cba-6a3aabf56e37	GET	/quotes	http://localhost:3000
+20230406	11:55:14	826bcfc5-af04-4f6d-a5a3-acf279c44a18	GET	/users	http://localhost:3000
+20230406	11:55:58	c22d5a96-d1d3-49ed-b630-866403930506	GET	/quotes	http://localhost:3000
+20230406	12:31:14	b1343846-99a3-47fd-af4d-b6eb72ac97bd	GET	/quotes	http://localhost:3000
+20230406	12:31:17	253c16b4-1d2a-4eec-a950-7c8e18442054	GET	/users	http://localhost:3000
