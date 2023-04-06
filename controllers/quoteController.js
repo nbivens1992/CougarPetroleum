@@ -50,10 +50,10 @@ const createNewQuote = asyncHandler(async (req, res) => {
 // @route PATCH /quotes
 // @access Private
 const updateQuote = asyncHandler(async (req, res) => {
-    const { id, galReq, dDate, completed} = req.body
+    const { id, galReq, dDate, sPrice, amountDue} = req.body
 
     // Confirm data
-    if (!id || !galReq || !dDate || typeof completed !== 'boolean') {
+    if (!id || !galReq || !dDate || !sPrice) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
@@ -71,7 +71,9 @@ const updateQuote = asyncHandler(async (req, res) => {
  
     quote.galReq = galReq
     quote.dDate = dDate
-    quote.completed = completed
+    quote.sPrice = sPrice
+    quote.amountDue = amountDue
+
 
     const updatedQuote = await quote.save()
 
