@@ -48,7 +48,7 @@ const updateUserInfo = asyncHandler(async (req, res) => {
     const { id, user, fullName, address1, address2, city, state, zip } = req.body
 
     // Confirm data 
-    if (!id ||!user|| !fullName || !address1 || !city || !state || !zip) {
+    if (!id || !user|| !fullName || !address1 || !city || !state || !zip) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
