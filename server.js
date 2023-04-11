@@ -29,6 +29,7 @@ app.use('/', require('./routes/root'))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/quotes', require('./routes/quoteRoutes'))
 app.use('/userInfos', require('./routes/userInfoRoutes'))
+app.use('/auth', require('./routes/authRoutes'))
 
 app.all('*', (req, res) => {
     res.status(404)
