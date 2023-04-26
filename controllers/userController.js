@@ -1,6 +1,5 @@
 const User = require('../models/user')
 const Quote = require('../models/quote')
-const UserInfo = require('../models/userInfo')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 

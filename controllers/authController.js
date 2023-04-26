@@ -6,18 +6,54 @@ const asyncHandler = require('express-async-handler')
 // @desc Login
 // @route POST /auth
 // @access Public
+const register = asyncHandler(async (req, res) => {
+    const { username,password} = req.body
+
+    if (!username || !password) {
+        return res.status(400).json({ message: 'All fields are required' })
+    }
+
+    const accessToken = jwt.sign(
+        {
+            "UserInfo": {
+                "username": username
+            }
+        },
+        process.env.ACCESS_TOKEN_SECRET,
+        { expiresIn: '15m' }
+    )
+
+    const refreshToken = jwt.sign(
+        { "username": username },
+        process.env.REFRESH_TOKEN_SECRET,
+        { expiresIn: '7d' }
+    )
+
+    // Create secure cookie with refresh token 
+    res.cookie('jwt', refreshToken, {
+        httpOnly: true, //accessible only by web server 
+        secure: true, //https
+        sameSite: 'None', //cross-site cookie 
+        maxAge: 7 * 24 * 60 * 60 * 1000 //cookie expiry: set to match rT
+    })
+
+    // Send accessToken containing username  
+    res.json({ accessToken })
+})
+
+// @desc Login
+// @route POST /auth
+// @access Public
 const login = asyncHandler(async (req, res) => {
     const { username, password } = req.body
 
+    
     if (!username || !password) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
     const foundUser = await User.findOne({ username }).exec()
 
-   // if (!foundUser || !foundUser.active) {
-    //    return res.status(401).json({ message: 'Unauthorized user' })
-   // }
 
     const match = await bcrypt.compare(password, foundUser.password)
 
@@ -26,8 +62,7 @@ const login = asyncHandler(async (req, res) => {
     const accessToken = jwt.sign(
         {
             "UserInfo": {
-                "username": foundUser.username,
-                "roles": foundUser.roles
+                "username": foundUser.username
             }
         },
         process.env.ACCESS_TOKEN_SECRET,
@@ -48,7 +83,7 @@ const login = asyncHandler(async (req, res) => {
         maxAge: 7 * 24 * 60 * 60 * 1000 //cookie expiry: set to match rT
     })
 
-    // Send accessToken containing username and roles 
+    // Send accessToken containing username  
     res.json({ accessToken })
 })
 
@@ -76,7 +111,6 @@ const refresh = (req, res) => {
                 {
                     "UserInfo": {
                         "username": foundUser.username,
-                        "roles": foundUser.roles
                     }
                 },
                 process.env.ACCESS_TOKEN_SECRET,
@@ -87,6 +121,7 @@ const refresh = (req, res) => {
         })
     )
 }
+
 
 // @desc Logout
 // @route POST /auth/logout
@@ -99,6 +134,7 @@ const logout = (req, res) => {
 }
 
 module.exports = {
+    register,
     login,
     refresh,
     logout
