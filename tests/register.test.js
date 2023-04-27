@@ -1,9 +1,10 @@
 const request = require("supertest");
 const app = require("../server");
 
+
 describe("Registration Tests", () => {
   /*test("GET /", async () => {
-    const res = await request(app).get("/register");
+    const res = await request(app).get("/users");
     expect(res.statusCode).toBe(200);
     expect(res.body.data.length).toEqual(2);
     expect(res.body.data[0].username).toBe("John");
@@ -13,7 +14,7 @@ describe("Registration Tests", () => {
   });*/
 
   test("POST / valid data", async () => {
-    const res = await request(app).post("/register").send({
+    const res = await request(app).post("/users").send({
       username: "TestUser#3",
       password: "testpassword",
     });
@@ -22,7 +23,7 @@ describe("Registration Tests", () => {
   });
 
   test("POST / empty fields", async () => {
-    const res = await request(app).post("/register").send({
+    const res = await request(app).post("/users").send({
       username: "",
       password: "",
     });
@@ -31,7 +32,7 @@ describe("Registration Tests", () => {
   });
 
   test("POST / duplicate username", async () => {
-    const res = await request(app).post("/register").send({
+    const res = await request(app).post("/users").send({
       username: "MyCoolUsername",
       password: "password",
     });
