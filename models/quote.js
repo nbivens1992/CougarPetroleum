@@ -24,13 +24,18 @@ const quoteSchema = new mongoose.Schema(
             type: Date,
             required: true
         },
+        address: {
+            type: String,
+            required: true
+        },
+        
         sPrice: {
             type: Number,
             require: true
         },
         amountDue: {
             type: Number,
-            required: false
+            required: true
         }
 
     }
