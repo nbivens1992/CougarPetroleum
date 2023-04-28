@@ -28,14 +28,13 @@ const quoteSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        
         sPrice: {
             type: Number,
-            require: true
+            require: false
         },
         amountDue: {
             type: Number,
-            required: true
+            required: false
         }
 
     }
