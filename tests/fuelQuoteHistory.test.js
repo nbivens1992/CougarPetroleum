@@ -1,11 +1,12 @@
 const request = require("supertest");
 const app = require("../server");
+const quote = require("../models/quote");
 
 describe("GET /quotes", () => {
   it("GET/valid history", async () => {
     
     // Create a test FuelQuote object with valid data
-    const fuelQuote = new FuelQuote({
+    const fuelQuote = new quote({
       user: "644725279a5bcc55a314f046",
       galReq: 2500,
       dDate: "2023-04-28",

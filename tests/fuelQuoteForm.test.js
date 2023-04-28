@@ -29,7 +29,7 @@ describe("Fuel Quote Form Tests", () => {
   });
 
   test("invalid quote", async () => {
-    const res = await request(app).put("/quotes").send({
+    const res = await request(app).patch("/quotes").send({
       user: "6434369bf92d1cbc8822a694",
       galReq: 2500,
       dDate:"",

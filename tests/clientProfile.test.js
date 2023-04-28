@@ -1,18 +1,6 @@
 const request = require("supertest");
 const app = require("../server");
 
-let server;
-
-beforeAll(() => {
-  server = app.listen(3000, () => {
-    console.log('Server is listening on port 3000');
-  });
-});
-
-afterAll(() => {
-  server.close();
-});
-
 describe("Profile Management Tests", () => {
   /*test("GET /", async () => {
     const res = await request(app).get("/userInfos");
@@ -37,7 +25,16 @@ describe("Profile Management Tests", () => {
       zip: "12345",
     });
     expect(res.statusCode).toBe(201);
-    expect(res.body.message).toBe("New client created");
+    expect(res.body.message).toBe("`New user created");
+    const accessToken = jwt.sign(
+      {
+        UserInfo: {
+          username: 'testuser',
+        },
+      },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: '15m' }
+    )
   });
 
   test("POST / empty fields", async () => {

@@ -1,44 +1,74 @@
-const request = require("supertest");
-const app = require("../server");
+const request = require('supertest')
+const app = require('../server')
 
+describe('User API', () => {
+  let testUser = null
 
-describe("Login Tests", () => {
-  test("GET /", async () => {
-    const res = await request(app).get("/users");
-    expect(res.statusCode).toBe(200);
-    expect(res.body.data.length).toEqual(2);
-    expect(res.body.data[0].username).toBe("nbivens");
-    expect(res.body.data[0].password).toBe("123abc");
-    expect(res.body.data[1].username).toBe("williamBivens");
-    expect(res.body.data[1].password).toBe("123abc");
-  });
+  beforeAll(async () => {
+    // Create a test user
+    const username = 'testuser'
+    const password = 'testpassword'
+    const hashedPwd = await bcrypt.hash(password, 10)
+    const user = await User.create({ username, password: hashedPwd })
+    testUser = user.toObject()
+    delete testUser.password
+  })
 
-  test("POST / valid data", async () => {
-    const res = await request(app).post("/users").send({
-      username: "Clyde",
-      password: "clydepass",
-    });
-    expect(res.statusCode).toBe(200);
-    expect(res.body.data.length).toEqual(1);
-    expect(res.body.data[0].username).toBe("Clyde");
-    expect(res.body.data[0].password).toBe("clydepass");
-  });
+  afterAll(async () => {
+    // Remove the test user
+    await User.deleteOne({ _id: testUser._id })
+  })
 
-  test("POST / empty fields", async () => {
-    const res = await request(app).post("/users").send({
-      username: "",
-      password: "",
-    });
-    expect(res.statusCode).toBe(400);
-    expect(res.body.message).toBe("All fields are required");
-  });
+  describe('GET /users', () => {
+    test('should return all users', async () => {
+      const response = await request(app).get('/users')
+      expect(response.status).toBe(200)
+      expect(response.body.length).toBeGreaterThan(0)
+    })
+  })
 
-  test("POST / user does not exist", async () => {
-    const res = await request(app).post("/users").send({
-      username: "Steve",
-      password: "stevepass",
-    });
-    expect(res.statusCode).toBe(400);
-    expect(res.body.message).toBe("User does not exist");
-  });
-});
+  describe('POST /users', () => {
+    test('should create a new user', async () => {
+      const newUser = { username: 'newuser', password: 'newpassword' }
+      const response = await request(app)
+        .post('/users')
+        .send(newUser)
+      expect(response.status).toBe(201)
+      expect(response.body.message).toBe('New user created')
+      // Verify the new user exists in the database
+      const createdUser = await User.findOne({ username: 'newuser' }).lean().exec()
+      expect(createdUser).toBeTruthy()
+      expect(createdUser.username).toBe(newUser.username)
+    })
+
+    test('should return an error when missing required fields', async () => {
+      const response = await request(app)
+        .post('/users')
+        .send({ username: 'newuser' })
+      expect(response.status).toBe(400)
+      expect(response.body.message).toBe('All fields are required')
+    })
+
+    test('should return an error when creating a duplicate user', async () => {
+      const response = await request(app)
+        .post('/users')
+        .send({ username: testUser.username, password: 'password' })
+      expect(response.status).toBe(409)
+      expect(response.body.message).toBe('Duplicate username')
+    })
+  })
+
+  describe('PATCH /users', () => {
+    test('should update a user', async () => {
+      const updatedUsername = 'newusername'
+      const response = await request(app)
+        .patch('/users')
+        .send({ id: testUser._id, username: updatedUsername })
+      expect(response.status).toBe(200)
+      expect(response.body.message).toBe(`${updatedUsername} updated`)
+      // Verify the user was updated in the database
+      const updatedUser = await User.findById(testUser._id).lean().exec()
+      expect(updatedUser.username).toBe(updatedUsername)
+    })
+  })
+})
