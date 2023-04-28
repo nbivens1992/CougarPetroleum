@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682649791498" clover="3.2.0">
-  <project timestamp="1682649791499" name="All files">
-    <metrics statements="326" coveredstatements="185" conditionals="121" coveredconditionals="28" methods="31" coveredmethods="16" elements="478" coveredelements="229" complexity="0" loc="326" ncloc="326" packages="6" files="20" classes="20"/>
+<coverage generated="1682703482832" clover="3.2.0">
+  <project timestamp="1682703482832" name="All files">
+    <metrics statements="326" coveredstatements="206" conditionals="121" coveredconditionals="44" methods="31" coveredmethods="20" elements="478" coveredelements="270" complexity="0" loc="326" ncloc="326" packages="6" files="20" classes="20"/>
     <package name="CougarPetroleum">
       <metrics statements="39" coveredstatements="34" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
-      <file name="server.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\server.js">
+      <file name="server.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\server.js">
         <metrics statements="39" coveredstatements="34" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="3"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="26" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="30" count="6" type="stmt"/>
-        <line num="31" count="6" type="stmt"/>
-        <line num="32" count="6" type="stmt"/>
-        <line num="33" count="6" type="stmt"/>
-        <line num="36" count="6" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="38" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="39" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="3" type="stmt"/>
         <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="41" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="47" count="6" type="stmt"/>
-        <line num="49" count="6" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="54" count="6" type="stmt"/>
+        <line num="54" count="4" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
-        <line num="59" count="6" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
       </file>
     </package>
     <package name="CougarPetroleum.config">
       <metrics statements="14" coveredstatements="12" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
-      <file name="allowedOrigins.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\config\allowedOrigins.js">
+      <file name="allowedOrigins.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\config\allowedOrigins.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
       </file>
-      <file name="corsOptions.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\config\corsOptions.js">
+      <file name="corsOptions.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\config\corsOptions.js">
         <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="5" count="21" type="cond" truecount="3" falsecount="1"/>
-        <line num="6" count="21" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="22" type="cond" truecount="3" falsecount="1"/>
+        <line num="6" count="22" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
       </file>
-      <file name="dbConn.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\config\dbConn.js">
+      <file name="dbConn.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\config\dbConn.js">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
       </file>
     </package>
     <package name="CougarPetroleum.controllers">
-      <metrics statements="185" coveredstatements="61" conditionals="101" coveredconditionals="17" methods="18" coveredmethods="7"/>
-      <file name="authController.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\controllers\authController.js">
+      <metrics statements="185" coveredstatements="77" conditionals="101" coveredconditionals="31" methods="18" coveredmethods="10"/>
+      <file name="authController.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\controllers\authController.js">
         <metrics statements="39" coveredstatements="21" conditionals="18" coveredconditionals="7" methods="5" coveredmethods="3"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
         <line num="12" count="2" type="cond" truecount="4" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
@@ -89,7 +89,7 @@
         <line num="26" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="47" count="6" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="51" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="52" count="0" type="stmt"/>
@@ -100,7 +100,7 @@
         <line num="72" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
         <line num="87" count="0" type="stmt"/>
-        <line num="93" count="6" type="stmt"/>
+        <line num="93" count="4" type="stmt"/>
         <line num="94" count="2" type="stmt"/>
         <line num="96" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="98" count="1" type="stmt"/>
@@ -110,27 +110,27 @@
         <line num="108" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="110" count="0" type="stmt"/>
         <line num="120" count="0" type="stmt"/>
-        <line num="129" count="6" type="stmt"/>
+        <line num="129" count="4" type="stmt"/>
         <line num="130" count="0" type="stmt"/>
         <line num="131" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="132" count="0" type="stmt"/>
         <line num="133" count="0" type="stmt"/>
-        <line num="136" count="6" type="stmt"/>
+        <line num="136" count="4" type="stmt"/>
       </file>
-      <file name="quoteController.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\controllers\quoteController.js">
+      <file name="quoteController.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\controllers\quoteController.js">
         <metrics statements="45" coveredstatements="23" conditionals="22" coveredconditionals="10" methods="5" coveredmethods="4"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="14" count="0" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="172" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
+        <line num="18" count="336" type="stmt"/>
+        <line num="19" count="334" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="28" count="6" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
         <line num="33" count="2" type="cond" truecount="6" falsecount="0"/>
         <line num="34" count="1" type="stmt"/>
@@ -139,7 +139,7 @@
         <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="43" count="1" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="52" count="6" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
         <line num="56" count="1" type="cond" truecount="2" falsecount="4"/>
         <line num="57" count="1" type="stmt"/>
@@ -153,7 +153,7 @@
         <line num="72" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
-        <line num="81" count="6" type="stmt"/>
+        <line num="81" count="4" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
         <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="86" count="0" type="stmt"/>
@@ -163,20 +163,20 @@
         <line num="96" count="0" type="stmt"/>
         <line num="98" count="0" type="stmt"/>
         <line num="100" count="0" type="stmt"/>
-        <line num="103" count="6" type="stmt"/>
+        <line num="103" count="4" type="stmt"/>
       </file>
-      <file name="userController.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\controllers\userController.js">
+      <file name="userController.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\controllers\userController.js">
         <metrics statements="54" coveredstatements="9" conditionals="30" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="15" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="29" count="0" type="stmt"/>
@@ -189,7 +189,7 @@
         <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="48" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
-        <line num="57" count="6" type="stmt"/>
+        <line num="57" count="4" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
         <line num="61" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="62" count="0" type="stmt"/>
@@ -204,7 +204,7 @@
         <line num="84" count="0" type="stmt"/>
         <line num="87" count="0" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
-        <line num="95" count="6" type="stmt"/>
+        <line num="95" count="4" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
         <line num="99" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="100" count="0" type="stmt"/>
@@ -220,31 +220,31 @@
         <line num="123" count="0" type="stmt"/>
         <line num="125" count="0" type="stmt"/>
         <line num="127" count="0" type="stmt"/>
-        <line num="130" count="6" type="stmt"/>
+        <line num="130" count="4" type="stmt"/>
       </file>
-      <file name="userInfoController.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\controllers\userInfoController.js">
-        <metrics statements="47" coveredstatements="8" conditionals="31" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+      <file name="userInfoController.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\controllers\userInfoController.js">
+        <metrics statements="47" coveredstatements="24" conditionals="31" coveredconditionals="14" methods="4" coveredmethods="3"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="14" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="8"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="8" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="47" count="6" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="51" count="0" type="cond" truecount="0" falsecount="9"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="51" count="2" type="cond" truecount="2" falsecount="7"/>
+        <line num="52" count="2" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="59" count="0" type="stmt"/>
@@ -260,150 +260,150 @@
         <line num="76" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
-        <line num="86" count="6" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
-        <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="95" count="0" type="stmt"/>
-        <line num="97" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="98" count="0" type="stmt"/>
+        <line num="86" count="4" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="90" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="97" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="98" count="1" type="stmt"/>
         <line num="101" count="0" type="stmt"/>
         <line num="103" count="0" type="stmt"/>
         <line num="105" count="0" type="stmt"/>
-        <line num="108" count="6" type="stmt"/>
+        <line num="108" count="4" type="stmt"/>
       </file>
     </package>
     <package name="CougarPetroleum.middleware">
-      <metrics statements="43" coveredstatements="34" conditionals="10" coveredconditionals="5" methods="6" coveredmethods="4"/>
-      <file name="LoginLimiter.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\middleware\LoginLimiter.js">
+      <metrics statements="43" coveredstatements="39" conditionals="10" coveredconditionals="7" methods="6" coveredmethods="5"/>
+      <file name="LoginLimiter.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\middleware\LoginLimiter.js">
         <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
       </file>
-      <file name="errorHandler.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\middleware\errorHandler.js">
+      <file name="errorHandler.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\middleware\errorHandler.js">
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
       </file>
-      <file name="logger.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\middleware\logger.js">
+      <file name="logger.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\middleware\logger.js">
         <metrics statements="18" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="22" type="stmt"/>
-        <line num="9" count="22" type="stmt"/>
-        <line num="11" count="22" type="stmt"/>
-        <line num="12" count="22" type="cond" truecount="1" falsecount="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="26" type="stmt"/>
+        <line num="9" count="26" type="stmt"/>
+        <line num="11" count="26" type="stmt"/>
+        <line num="12" count="26" type="cond" truecount="1" falsecount="1"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="15" count="22" type="stmt"/>
+        <line num="15" count="26" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="22" count="21" type="stmt"/>
-        <line num="23" count="21" type="stmt"/>
-        <line num="24" count="21" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="22" type="stmt"/>
+        <line num="23" count="22" type="stmt"/>
+        <line num="24" count="22" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
       </file>
-      <file name="verifyJWT.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\middleware\verifyJWT.js">
-        <metrics statements="11" coveredstatements="6" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="7" type="cond" truecount="1" falsecount="1"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
+      <file name="verifyJWT.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\middleware\verifyJWT.js">
+        <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="16" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
     </package>
     <package name="CougarPetroleum.models">
       <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="quote.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\models\quote.js">
+      <file name="quote.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\models\quote.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
       </file>
-      <file name="user.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\models\user.js">
+      <file name="user.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\models\user.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
       </file>
-      <file name="userInfo.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\models\userInfo.js">
+      <file name="userInfo.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\models\userInfo.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
       </file>
     </package>
     <package name="CougarPetroleum.routes">
       <metrics statements="34" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="authRoutes.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\routes\authRoutes.js">
+      <file name="authRoutes.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\routes\authRoutes.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
       </file>
-      <file name="quoteRoutes.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\routes\quoteRoutes.js">
+      <file name="quoteRoutes.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\routes\quoteRoutes.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
       </file>
-      <file name="root.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\routes\root.js">
+      <file name="root.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\routes\root.js">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
       </file>
-      <file name="userInfoRoutes.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\routes\userInfoRoutes.js">
+      <file name="userInfoRoutes.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\routes\userInfoRoutes.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
       </file>
-      <file name="userRoutes.js" path="C:\Users\binhp\Documents\Coding Projects\Swd project\CougarPetroleum\routes\userRoutes.js">
+      <file name="userRoutes.js" path="C:\Users\nbive\Coding Projects\Cougar Petroleum\CougarPetroleum\routes\userRoutes.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
       </file>
     </package>
   </project>

@@ -1,6 +1,7 @@
 const request = require('supertest')
 const app = require('../server')
 
+
 describe('Auth API', () => {
   describe('POST /auth/register', () => {
     test('should return 400 if username or password is missing', async () => {
@@ -94,13 +95,3 @@ describe('Auth API', () => {
 
   });
 })
-//   describe('POST /auth/logout', () => {
-//     test('should return 204 if no cookie is present', async () => {
-//       const response = await request(app)
-//         .post('/auth/logout')
-//         .expect(204)
-
-//       expect(response.body).toBeUndefined()
-//     })
-
-//     test('should return 200 and clear the
